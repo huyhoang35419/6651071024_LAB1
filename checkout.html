@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Thanh Toán Đơn Hàng | Đặc Sản Phú Yên</title>
+  <meta name="description" content="Thanh toán an toàn, hỗ trợ COD, chuyển khoản VietQR tự động, MoMo, ZaloPay, thẻ quốc tế. Cam kết giao hỏa tốc đóng thùng xốp cấp đông.">
+  <link rel="icon" type="image/svg+xml" href="Images/logo.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Merriweather:ital,wght@0,700;0,900;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <link rel="stylesheet" href="Styles/style.css">
+  <link rel="stylesheet" href="Styles/responsive.css">
+</head>
+<body>
+
+  <!-- TOP BAR -->
+  <header class="top-bar">
+    <div class="container">
+      <div class="top-bar-left">
+        <span><i class="fa-solid fa-phone"></i> Hotline Tuy Hòa: <strong>0988.123.456</strong></span>
+        <span><i class="fa-solid fa-envelope"></i> dacsanxunau@phuyen.vn</span>
+        <span class="top-bar-highlight"><i class="fa-solid fa-snowflake"></i> Giao lạnh hỏa tốc toàn quốc - Đóng thùng xốp 48h</span>
+      </div>
+      <div class="top-bar-right">
+        <a href="order-tracking.html"><i class="fa-solid fa-route"></i> Tra cứu đơn hàng</a>
+        <span>|</span>
+        <a href="admin.html"><i class="fa-solid fa-user-shield"></i> Trang Quản Trị</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- MAIN HEADER -->
+  <div class="main-header">
+    <div class="container">
+      <div class="logo">
+        <a href="index.html">
+          <img src="Images/logo.svg" alt="Đặc Sản Phú Yên - Hồn Quê Xứ Nẫu">
+        </a>
+      </div>
+
+      <div style="font-size: 18px; font-weight: 800; color: var(--primary);">
+        <i class="fa-solid fa-shield-halved"></i> THANH TOÁN AN TOÀN & BẢO MẬT
+      </div>
+
+      <div class="header-actions">
+        <a href="cart.html" class="cart-widget">
+          <div class="action-item">
+            <i class="fa-solid fa-basket-shopping"></i>
+            <span class="badge-count cart-badge-count">0</span>
+          </div>
+          <div class="cart-info">
+            <span>Quay lại giỏ</span>
+            <span class="cart-total-price">0 đ</span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- BREADCRUMB -->
+  <div class="page-header" style="padding: 20px 0; margin-bottom: 30px;">
+    <div class="container">
+      <div class="breadcrumb">
+        <a href="index.html">Trang chủ</a>
+        <span>/</span>
+        <a href="cart.html">Giỏ hàng</a>
+        <span>/</span>
+        <span class="current">Thông tin thanh toán</span>
+      </div>
+      <h1 style="font-size: 26px; margin-top: 5px;">Thanh Toán Đơn Hàng</h1>
+    </div>
+  </div>
+
+  <!-- CHECKOUT MAIN FORM -->
+  <main class="container">
+    <form id="checkoutForm">
+      <div class="checkout-grid">
+        <!-- Cột Trái: Thông Tin Giao Hàng & Hình Thức Thanh Toán -->
+        <div>
+          <!-- 1. Thông tin người nhận -->
+          <div class="checkout-box" style="margin-bottom: 25px;">
+            <h2><i class="fa-solid fa-user"></i> 1. Thông Tin Người Nhận Hàng</h2>
+            
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px;">
+              <div class="form-group">
+                <label>Họ và tên người nhận (*):</label>
+                <input type="text" class="form-control" id="coFullname" placeholder="Ví dụ: Nguyễn Văn An" required>
+              </div>
+
+              <div class="form-group">
+                <label>Số điện thoại nhận hàng (*):</label>
+                <input type="tel" class="form-control" id="coPhone" placeholder="Ví dụ: 0912 345 678" required>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label>Địa chỉ Email (Nhận thông báo đơn hàng & mã vận đơn):</label>
+              <input type="email" class="form-control" id="coEmail" placeholder="email@gmail.com">
+            </div>
+
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px;">
+              <div class="form-group">
+                <label>Tỉnh / Thành phố (*):</label>
+                <select class="form-control" id="coProvince" required>
+                  <option value="Hồ Chí Minh">TP. Hồ Chí Minh</option>
+                  <option value="Hà Nội">Hà Nội</option>
+                  <option value="Phú Yên">Phú Yên</option>
+                  <option value="Đà Nẵng">Đà Nẵng</option>
+                  <option value="Khánh Hòa">Khánh Hòa</option>
+                  <option value="Bình Định">Bình Định</option>
+                  <option value="Đắk Lắk">Đắk Lắk</option>
+                  <option value="Cần Thơ">Cần Thơ</option>
+                  <option value="Khác">Tỉnh thành khác...</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label>Quận / Huyện (*):</label>
+                <input type="text" class="form-control" id="coDistrict" placeholder="Ví dụ: Quận 1, Cầu Giấy..." required>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label>Địa chỉ cụ thể (Số nhà, tên đường, thôn, xóm) (*):</label>
+              <input type="text" class="form-control" id="coAddress" placeholder="Ví dụ: 123 Đường Nguyễn Huệ, Phường 2" required>
+            </div>
+
+            <div class="form-group">
+              <label>Ghi chú đóng gói & Giao hàng:</label>
+              <textarea class="form-control" id="coNote" rows="2" placeholder="Ví dụ: Giao giờ hành chính, đóng thùng xốp dày giữ lạnh giúp tôi..."></textarea>
+            </div>
+          </div>
+
+          <!-- 2. Phương thức thanh toán -->
+          <div class="checkout-box">
+            <h2><i class="fa-solid fa-credit-card"></i> 2. Phương Thức Thanh Toán</h2>
+
+            <!-- COD -->
+            <div class="payment-method-item active" data-method="cod">
+              <div class="method-title">
+                <input type="radio" name="paymentMethod" value="cod" checked>
+                <i class="fa-solid fa-money-bill-wave" style="color: #16a34a; font-size: 18px;"></i>
+                <span>Thanh toán khi nhận hàng (COD)</span>
+              </div>
+              <div class="payment-detail">
+                Quý khách được kiểm tra ngoại quan thùng hàng, niêm phong cấp đông trước khi thanh toán tiền mặt cho shipper Viettel Post.
+              </div>
+            </div>
+
+            <!-- VietQR -->
+            <div class="payment-method-item" data-method="vietqr">
+              <div class="method-title">
+                <input type="radio" name="paymentMethod" value="vietqr">
+                <i class="fa-solid fa-qrcode" style="color: #004e89; font-size: 18px;"></i>
+                <span>Chuyển khoản Ngân hàng qua VietQR (Tự động xác nhận)</span>
+              </div>
+              <div class="payment-detail">
+                <p>Quét mã QR dưới đây bằng bất kỳ ứng dụng ngân hàng nào (Vietcombank, MB, Techcombank, BIDV, VPBank,...) để thanh toán ngay:</p>
+                <div class="qr-preview-box">
+                  <img src="Images/vietqr-sample.svg" alt="Mã VietQR Chuyển Khoản" style="max-width: 220px;">
+                  <div style="font-size: 13px; line-height: 1.6;">
+                    <div>Ngân hàng: <strong>MBBank (Ngân hàng Quân Đội)</strong></div>
+                    <div>Số tài khoản: <strong style="color: #004e89;">0386888999</strong></div>
+                    <div>Chủ tài khoản: <strong>ĐẶC SẢN PHÚ YÊN XỨ NẪU</strong></div>
+                    <div>Số tiền: <strong id="vietqrAmount" style="color: #dc2626;">0 đ</strong></div>
+                    <div>Nội dung CK: <strong style="color: #e36414;">DACSAN [SĐT CỦA BẠN]</strong></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Ví MoMo / ZaloPay -->
+            <div class="payment-method-item" data-method="momo">
+              <div class="method-title">
+                <input type="radio" name="paymentMethod" value="momo">
+                <i class="fa-solid fa-wallet" style="color: #a21caf; font-size: 18px;"></i>
+                <span>Ví điện tử MoMo / ZaloPay / VNPay</span>
+              </div>
+              <div class="payment-detail">
+                Hệ thống sẽ chuyển hướng hoặc mở ứng dụng ví điện tử liên kết để thanh toán bảo mật 1 chạm.
+              </div>
+            </div>
+
+            <!-- Thẻ Tín Dụng Quốc Tế -->
+            <div class="payment-method-item" data-method="card">
+              <div class="method-title">
+                <input type="radio" name="paymentMethod" value="card">
+                <i class="fa-brands fa-cc-visa" style="color: #2563eb; font-size: 18px;"></i>
+                <span>Thẻ tín dụng / Ghi nợ quốc tế (Visa, Mastercard, JCB)</span>
+              </div>
+              <div class="payment-detail">
+                Cổng thanh toán mã hóa SSL 256-bit chuẩn PCI DSS, không lưu thông tin thẻ trên máy chủ.
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Cột Phải: Xem Lại Đơn Hàng & Nút Xác Nhận -->
+        <div>
+          <div class="checkout-box" style="position: sticky; top: 90px;">
+            <h2><i class="fa-solid fa-receipt"></i> Đơn Hàng Của Bạn</h2>
+
+            <!-- Danh sách món hàng -->
+            <div id="checkoutItemsReview" style="max-height: 280px; overflow-y: auto; margin-bottom: 20px; border-bottom: 1px solid var(--border-color); padding-bottom: 10px;">
+              <!-- Rendered dynamically -->
+            </div>
+
+            <!-- Tóm tắt số tiền -->
+            <div class="summary-row">
+              <span>Tạm tính:</span>
+              <strong id="coSubtotal">0 đ</strong>
+            </div>
+
+            <div class="summary-row" style="color: #dc2626;">
+              <span>Giảm giá:</span>
+              <strong id="coDiscount">-0 đ</strong>
+            </div>
+
+            <div class="summary-row">
+              <span>Phí vận chuyển Viettel Post:</span>
+              <strong id="coShipping">25.000 đ</strong>
+            </div>
+
+            <div class="summary-row summary-total" style="font-size: 20px;">
+              <span>Tổng thanh toán:</span>
+              <span id="coGrandTotal" style="color: var(--primary);">0 đ</span>
+            </div>
+
+            <!-- Huy hiệu cam kết -->
+            <div style="background: #f8fafc; border: 1px solid var(--border-color); padding: 12px; border-radius: 8px; margin: 20px 0; font-size: 12px; color: var(--text-muted); line-height: 1.6;">
+              <div><i class="fa-solid fa-lock" style="color: #16a34a;"></i> <strong>Bảo mật thanh toán:</strong> Mã hóa dữ liệu an toàn.</div>
+              <div><i class="fa-solid fa-snowflake" style="color: #0284c7;"></i> <strong>Đóng gói:</strong> Thùng xốp đông lạnh giữ nhiệt 48h.</div>
+              <div><i class="fa-solid fa-gift" style="color: #d97706;"></i> <strong>Tích điểm:</strong> Tích 1 điểm cho mỗi 10.000 đ giá trị đơn.</div>
+            </div>
+
+            <button type="submit" class="btn btn-secondary btn-lg" style="width: 100%; text-align: center;">
+              <i class="fa-solid fa-check"></i> XÁC NHẬN ĐẶT HÀNG
+            </button>
+          </div>
+        </div>
+      </div>
+    </form>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="main-footer">
+    <div class="container">
+      <div class="footer-bottom" style="border: none; padding: 0; text-align: center;">
+        <p>© 2026 Đặc Sản Phú Yên - Hồn Quê Xứ Nẫu. Thiết kế phục vụ bài tập môn Thiết kế Web (MSSV: 6651071024).</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="Scripts/products-data.js"></script>
+  <script src="Scripts/main.js"></script>
+  <script src="Scripts/checkout.js"></script>
+</body>
+</html>

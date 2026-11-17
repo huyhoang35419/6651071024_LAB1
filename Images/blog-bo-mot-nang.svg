@@ -1,0 +1,20 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 350" width="600" height="350">
+  <defs>
+    <linearGradient id="bGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#b91c1c"/>
+      <stop offset="100%" stop-color="#450a0a"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="350" fill="url(#bGrad)"/>
+  <circle cx="500" cy="100" r="150" fill="#ffffff" opacity="0.08"/>
+  <circle cx="100" cy="280" r="100" fill="#ffffff" opacity="0.05"/>
+  <g transform="translate(40, 40)">
+    <rect width="150" height="30" rx="15" fill="#ffffff" opacity="0.9"/>
+    <text x="75" y="20" font-family="'Segoe UI', sans-serif" font-weight="700" font-size="12" fill="#b91c1c" text-anchor="middle">ẨM THỰC PHÚ YÊN</text>
+  </g>
+  <g transform="translate(40, 220)">
+    <rect width="520" height="90" rx="10" fill="#000000" opacity="0.4"/>
+    <text x="260" y="45" font-family="'Segoe UI', sans-serif" font-weight="800" font-size="20" fill="#ffffff" text-anchor="middle">Bí Quyết Nướng Bò Một Nắng Chấm Muối Kiến Vàng</text>
+    <text x="260" y="70" font-family="'Segoe UI', sans-serif" font-weight="500" font-size="13" fill="#cbd5e1" text-anchor="middle">Khám phá văn hóa ẩm thực miền biển Xứ Nẫu • Đọc 5 phút</text>
+  </g>
+</svg>

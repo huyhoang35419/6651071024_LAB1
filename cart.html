@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Giỏ Hàng Đặc Sản Phú Yên | Đóng Thùng Xốp Cấp Đông 48H</title>
+  <meta name="description" content="Kiểm tra giỏ hàng đặc sản Phú Yên, tính phí vận chuyển GHN/Viettel Post, áp dụng mã voucher và tùy chọn đóng thùng xốp cấp đông.">
+  <link rel="icon" type="image/svg+xml" href="Images/logo.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Merriweather:ital,wght@0,700;0,900;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <link rel="stylesheet" href="Styles/style.css">
+  <link rel="stylesheet" href="Styles/responsive.css">
+</head>
+<body>
+
+  <!-- TOP BAR -->
+  <header class="top-bar">
+    <div class="container">
+      <div class="top-bar-left">
+        <span><i class="fa-solid fa-phone"></i> Hotline Tuy Hòa: <strong>0988.123.456</strong></span>
+        <span><i class="fa-solid fa-envelope"></i> dacsanxunau@phuyen.vn</span>
+        <span class="top-bar-highlight"><i class="fa-solid fa-snowflake"></i> Giao lạnh hỏa tốc toàn quốc - Đóng thùng xốp 48h</span>
+      </div>
+      <div class="top-bar-right">
+        <a href="order-tracking.html"><i class="fa-solid fa-route"></i> Tra cứu đơn hàng</a>
+        <span>|</span>
+        <a href="admin.html"><i class="fa-solid fa-user-shield"></i> Trang Quản Trị</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- MAIN HEADER -->
+  <div class="main-header">
+    <div class="container">
+      <div class="logo">
+        <a href="index.html">
+          <img src="Images/logo.svg" alt="Đặc Sản Phú Yên - Hồn Quê Xứ Nẫu">
+        </a>
+      </div>
+
+      <div class="header-search">
+        <form class="search-form" id="headerSearchForm">
+          <select class="search-category" id="searchCategorySelect">
+            <option value="all">Tất cả danh mục</option>
+            <option value="hai-san">Hải sản đặc trưng</option>
+            <option value="thit-nui-rung">Thịt & Núi rừng</option>
+            <option value="gia-vi">Gia vị & Nguyên liệu</option>
+            <option value="banh-keo">Bánh kẹo & Quà vặt</option>
+          </select>
+          <input type="text" class="search-input" id="searchInput" placeholder="Tìm kiếm bò một nắng, mắt cá ngừ, nước mắm..." autocomplete="off">
+          <button type="submit" class="search-btn">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </button>
+        </form>
+        <div class="search-suggest" id="searchSuggestBox"></div>
+      </div>
+
+      <div class="header-actions">
+        <a href="shop.html" class="action-item" title="Yêu thích">
+          <i class="fa-regular fa-heart"></i>
+          <span class="badge-count wishlist-badge-count">0</span>
+        </a>
+        <a href="cart.html" class="cart-widget">
+          <div class="action-item">
+            <i class="fa-solid fa-basket-shopping"></i>
+            <span class="badge-count cart-badge-count">0</span>
+          </div>
+          <div class="cart-info">
+            <span>Giỏ hàng</span>
+            <span class="cart-total-price">0 đ</span>
+          </div>
+        </a>
+        <button class="mobile-menu-btn" id="mobileMenuBtn">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- NAVIGATION BAR -->
+  <nav class="main-nav" id="mainNav">
+    <div class="container">
+      <div class="dept-menu">
+        <button class="dept-btn" id="deptBtn">
+          <span><i class="fa-solid fa-bars"></i> TẤT CẢ DANH MỤC</span>
+          <i class="fa-solid fa-chevron-down"></i>
+        </button>
+        <ul class="dept-dropdown" id="deptDropdown">
+          <li><a href="shop.html?cat=hai-san"><i class="fa-solid fa-fish"></i> Hải sản đặc trưng Phú Yên</a></li>
+          <li><a href="shop.html?cat=thit-nui-rung"><i class="fa-solid fa-drumstick-bite"></i> Bò một nắng & Muối kiến vàng</a></li>
+          <li><a href="shop.html?cat=gia-vi"><i class="fa-solid fa-mortar-pestle"></i> Nước mắm Gành Đỏ & Bánh tráng</a></li>
+          <li><a href="shop.html?cat=banh-keo"><i class="fa-solid fa-cookie-bite"></i> Bánh phu thê & Quà vặt Xứ Nẫu</a></li>
+          <li><a href="shop.html?cat=qua-bieu"><i class="fa-solid fa-gift"></i> Combo Quà biếu Thượng Hạng</a></li>
+        </ul>
+      </div>
+
+      <ul class="nav-menu">
+        <li><a href="index.html">Trang chủ</a></li>
+        <li><a href="shop.html">Cửa hàng</a></li>
+        <li><a href="blog.html">Câu chuyện Xứ Nẫu</a></li>
+        <li><a href="about.html">Giới thiệu</a></li>
+        <li><a href="contact.html">Liên hệ</a></li>
+        <li><a href="order-tracking.html">Tra cứu đơn</a></li>
+        <li><a href="admin.html"><i class="fa-solid fa-gear"></i> Quản trị</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- BREADCRUMB -->
+  <div class="page-header" style="padding: 20px 0; margin-bottom: 30px;">
+    <div class="container">
+      <div class="breadcrumb">
+        <a href="index.html"><i class="fa-solid fa-house"></i> Trang chủ</a>
+        <span>/</span>
+        <span class="current">Giỏ Hàng Của Bạn</span>
+      </div>
+      <h1 style="font-size: 26px; margin-top: 5px;">Giỏ Hàng Đặc Sản</h1>
+    </div>
+  </div>
+
+  <!-- CART MAIN CONTENT -->
+  <main class="container" style="margin-bottom: 60px;">
+    <!-- Empty Cart Alert -->
+    <div id="emptyCartState" style="display: none; text-align: center; padding: 70px 20px; background: #fff; border-radius: 12px; border: 1px solid var(--border-color);">
+      <div style="font-size: 54px; color: #cbd5e1; margin-bottom: 15px;"><i class="fa-solid fa-basket-shopping"></i></div>
+      <h2 style="font-size: 22px; color: var(--dark); margin-bottom: 8px;">Giỏ hàng của bạn đang trống!</h2>
+      <p style="color: var(--text-muted); font-size: 14px; margin-bottom: 25px;">Hãy khám phá các món đặc sản Phú Yên trứ danh và thêm vào giỏ nhé.</p>
+      <a href="shop.html" class="btn btn-primary btn-lg">Khám Phá Cửa Hàng Ngay</a>
+    </div>
+
+    <!-- Active Cart Content Wrap -->
+    <div id="cartContentWrap" style="display: block;">
+      <!-- Table of items -->
+      <div class="cart-table-wrap">
+        <table class="cart-table">
+          <thead>
+            <tr>
+              <th>Sản Phẩm</th>
+              <th>Đơn Giá</th>
+              <th>Số Lượng</th>
+              <th>Tổng Cộng</th>
+              <th style="text-align: center;">Xóa</th>
+            </tr>
+          </thead>
+          <tbody id="cartTableBody">
+            <!-- Rendered by Scripts/cart.js -->
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Action buttons below table -->
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 35px; flex-wrap: wrap; gap: 15px;">
+        <a href="shop.html" class="btn btn-outline">
+          <i class="fa-solid fa-arrow-left"></i> Tiếp tục chọn món khác
+        </a>
+        <button class="btn btn-outline" onclick="if(confirm('Bạn có chắc muốn xóa sạch giỏ hàng?')) { localStorage.removeItem(CART_STORAGE_KEY); renderCartPage(); }">
+          <i class="fa-solid fa-trash-can"></i> Xóa toàn bộ giỏ hàng
+        </button>
+      </div>
+
+      <!-- Packaging Options & Shipping Calculation Grid -->
+      <div class="cart-extras-grid">
+        <!-- Box 1: Tùy Chọn Đóng Gói Chuyên Biệt -->
+        <div class="extra-box">
+          <h3><i class="fa-solid fa-box-open" style="color: var(--primary);"></i> Tùy Chọn Đóng Gói Đặc Sản</h3>
+          <p style="font-size: 13px; color: var(--text-muted); margin-bottom: 15px;">
+            Đảm bảo hải sản và thịt bò một nắng giữ nguyên vị ngọt tươi từ miền Trung:
+          </p>
+
+          <div class="package-option selected" id="pkg-standard" onclick="setPackagingType('standard')">
+            <input type="radio" name="packaging" checked style="margin-top: 3px;">
+            <div>
+              <strong style="color: var(--dark); font-size: 14px;">Đóng gói tiêu chuẩn</strong>
+              <p style="font-size: 12px; color: var(--text-muted);">Túi hút chân không, bọc màng khí chống sốc (Thích hợp đồ khô, gia vị, bánh kẹo). Miễn phí.</p>
+            </div>
+          </div>
+
+          <div class="package-option" id="pkg-freezer" onclick="setPackagingType('freezer')">
+            <input type="radio" name="packaging" style="margin-top: 3px;">
+            <div>
+              <strong style="color: var(--primary); font-size: 14px;"><i class="fa-solid fa-snowflake"></i> Đóng Thùng Xốp Đông Lạnh Cấp Tốc 48H</strong>
+              <p style="font-size: 12px; color: var(--text-muted);">Thùng xốp kín, đá gel khô giữ lạnh âm 18°C suốt 48h (Dành riêng cho cá ngừ, bò 1 nắng, mực). <strong style="color: #16a34a;">(Ưu đãi Miễn Phí)</strong></p>
+            </div>
+          </div>
+
+          <div class="package-option" id="pkg-gift" onclick="setPackagingType('gift')">
+            <input type="radio" name="packaging" style="margin-top: 3px;">
+            <div>
+              <strong style="color: #b45309; font-size: 14px;"><i class="fa-solid fa-gift"></i> Đóng Hộp Quà Biếu Cao Cấp Xứ Nẫu</strong>
+              <p style="font-size: 12px; color: var(--text-muted);">Hộp carton dập nhũ vàng sang trọng, thắt nơ đỏ kèm thiệp viết tay lời chúc ý nghĩa (+30.000 đ).</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Box 2: Tính Phí Ship GHN / Viettel Post & Áp Voucher -->
+        <div class="extra-box">
+          <h3><i class="fa-solid fa-calculator" style="color: var(--secondary);"></i> Phí Vận Chuyển Dự Kiến</h3>
+          <p style="font-size: 13px; color: var(--text-muted); margin-bottom: 12px;">
+            Tích hợp tính phí vận chuyển từ bưu cục Phú Yên đi các tỉnh:
+          </p>
+
+          <div class="form-group">
+            <label style="font-size: 13px; font-weight: 600;">Chọn khu vực nhận hàng:</label>
+            <select class="form-control" id="shippingProvinceSelect">
+              <option value="phuyen">Phú Yên (Nội tỉnh: Tuy Hòa, Sông Cầu, Đông Hòa,...) - 15.000 đ</option>
+              <option value="hcm" selected>TP. Hồ Chí Minh & Các tỉnh Miền Nam - 25.000 đ</option>
+              <option value="mientrung">Đà Nẵng, Khánh Hòa, Bình Định, Quảng Ngãi - 20.000 đ</option>
+              <option value="hanoi">Hà Nội & Các tỉnh Miền Bắc - 35.000 đ</option>
+              <option value="taynguyen">Khu vực Tây Nguyên (Gia Lai, Đắk Lắk,...) - 25.000 đ</option>
+            </select>
+          </div>
+
+          <div id="shippingCarrierNote" style="font-size: 13px; color: #0284c7; background: #e0f2fe; padding: 8px 12px; border-radius: 6px; margin-bottom: 15px;">
+            <i class="fa-solid fa-truck-fast"></i> Đơn vị: <strong>Viettel Post / GHN Hỏa tốc (24h)</strong>
+          </div>
+
+          <!-- Coupon code input -->
+          <label style="font-size: 13px; font-weight: 600;">Mã giảm giá (Voucher):</label>
+          <div class="coupon-form">
+            <input type="text" class="form-control" id="couponCodeInput" placeholder="Nhập mã PHUYEN10, XUNAU50K, FREESHIP..." style="text-transform: uppercase;">
+            <button class="btn btn-secondary" id="applyCouponBtn">Áp Dụng</button>
+          </div>
+          <div style="font-size: 12px; color: #64748b; margin-top: 6px;">
+            * Gợi ý: Nhập <strong>PHUYEN10</strong> (giảm 10%), <strong>XUNAU50K</strong> (giảm 50k đơn từ 500k) hoặc <strong>FREESHIP</strong>.
+          </div>
+        </div>
+      </div>
+
+      <!-- Order Summary Card -->
+      <div style="max-width: 500px; margin-left: auto;">
+        <div class="cart-summary-box">
+          <h3 style="font-size: 18px; font-weight: 800; color: var(--dark); margin-bottom: 15px;">Tổng Đơn Hàng</h3>
+          
+          <div class="summary-row">
+            <span>Tạm tính giỏ hàng:</span>
+            <strong id="summarySubtotal">0 đ</strong>
+          </div>
+
+          <div class="summary-row" id="summaryDiscountRow" style="display: none; color: #dc2626;">
+            <span>Giảm giá khuyến mãi:</span>
+            <strong id="summaryDiscount">-0 đ</strong>
+          </div>
+
+          <div class="summary-row">
+            <span>Phí vận chuyển dự kiến:</span>
+            <strong id="summaryShipping">25.000 đ</strong>
+          </div>
+
+          <div class="summary-row">
+            <span>Tùy chọn đóng gói:</span>
+            <strong id="summaryPackaging">0 đ</strong>
+          </div>
+
+          <div class="summary-row summary-total">
+            <span>Tổng thanh toán:</span>
+            <span id="summaryGrandTotal" style="color: var(--primary); font-size: 22px;">0 đ</span>
+          </div>
+
+          <div style="font-size: 12px; color: var(--text-muted); margin: 15px 0;">
+            (Đơn hàng từ 500.000 đ sẽ được tự động <strong>Miễn Phí Vận Chuyển</strong>)
+          </div>
+
+          <a href="checkout.html" class="btn btn-primary btn-lg" style="width: 100%; text-align: center;">
+            <i class="fa-solid fa-credit-card"></i> TIẾN HÀNH THANH TOÁN
+          </a>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="main-footer">
+    <div class="container">
+      <div class="footer-bottom" style="border: none; padding: 0; text-align: center;">
+        <p>© 2026 Đặc Sản Phú Yên - Hồn Quê Xứ Nẫu. Thiết kế phục vụ bài tập môn Thiết kế Web (MSSV: 6651071024).</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="Scripts/products-data.js"></script>
+  <script src="Scripts/main.js"></script>
+  <script src="Scripts/cart.js"></script>
+</body>
+</html>

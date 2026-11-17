@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chi Tiết Đặc Sản Phú Yên | Hồn Quê Xứ Nẫu</title>
+  <meta name="description" content="Chi tiết đặc sản chính gốc Phú Yên, hướng dẫn chế biến chuẩn vị, bảo quản cấp đông 48h và đánh giá từ khách hàng.">
+  <link rel="icon" type="image/svg+xml" href="Images/logo.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Merriweather:ital,wght@0,700;0,900;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <link rel="stylesheet" href="Styles/style.css">
+  <link rel="stylesheet" href="Styles/responsive.css">
+</head>
+<body>
+
+  <!-- TOP BAR -->
+  <header class="top-bar">
+    <div class="container">
+      <div class="top-bar-left">
+        <span><i class="fa-solid fa-phone"></i> Hotline Tuy Hòa: <strong>0988.123.456</strong></span>
+        <span><i class="fa-solid fa-envelope"></i> dacsanxunau@phuyen.vn</span>
+        <span class="top-bar-highlight"><i class="fa-solid fa-snowflake"></i> Giao lạnh hỏa tốc toàn quốc - Đóng thùng xốp 48h</span>
+      </div>
+      <div class="top-bar-right">
+        <a href="order-tracking.html"><i class="fa-solid fa-route"></i> Tra cứu đơn hàng</a>
+        <span>|</span>
+        <a href="admin.html"><i class="fa-solid fa-user-shield"></i> Trang Quản Trị</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- MAIN HEADER -->
+  <div class="main-header">
+    <div class="container">
+      <div class="logo">
+        <a href="index.html">
+          <img src="Images/logo.svg" alt="Đặc Sản Phú Yên - Hồn Quê Xứ Nẫu">
+        </a>
+      </div>
+
+      <div class="header-search">
+        <form class="search-form" id="headerSearchForm">
+          <select class="search-category" id="searchCategorySelect">
+            <option value="all">Tất cả danh mục</option>
+            <option value="hai-san">Hải sản đặc trưng</option>
+            <option value="thit-nui-rung">Thịt & Núi rừng</option>
+            <option value="gia-vi">Gia vị & Nguyên liệu</option>
+            <option value="banh-keo">Bánh kẹo & Quà vặt</option>
+          </select>
+          <input type="text" class="search-input" id="searchInput" placeholder="Tìm kiếm bò một nắng, mắt cá ngừ, nước mắm..." autocomplete="off">
+          <button type="submit" class="search-btn">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </button>
+        </form>
+        <div class="search-suggest" id="searchSuggestBox"></div>
+      </div>
+
+      <div class="header-actions">
+        <a href="shop.html" class="action-item" title="Yêu thích">
+          <i class="fa-regular fa-heart"></i>
+          <span class="badge-count wishlist-badge-count">0</span>
+        </a>
+        <a href="cart.html" class="cart-widget">
+          <div class="action-item">
+            <i class="fa-solid fa-basket-shopping"></i>
+            <span class="badge-count cart-badge-count">0</span>
+          </div>
+          <div class="cart-info">
+            <span>Giỏ hàng</span>
+            <span class="cart-total-price">0 đ</span>
+          </div>
+        </a>
+        <button class="mobile-menu-btn" id="mobileMenuBtn">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- NAVIGATION BAR -->
+  <nav class="main-nav" id="mainNav">
+    <div class="container">
+      <div class="dept-menu">
+        <button class="dept-btn" id="deptBtn">
+          <span><i class="fa-solid fa-bars"></i> TẤT CẢ DANH MỤC</span>
+          <i class="fa-solid fa-chevron-down"></i>
+        </button>
+        <ul class="dept-dropdown" id="deptDropdown">
+          <li><a href="shop.html?cat=hai-san"><i class="fa-solid fa-fish"></i> Hải sản đặc trưng Phú Yên</a></li>
+          <li><a href="shop.html?cat=thit-nui-rung"><i class="fa-solid fa-drumstick-bite"></i> Bò một nắng & Muối kiến vàng</a></li>
+          <li><a href="shop.html?cat=gia-vi"><i class="fa-solid fa-mortar-pestle"></i> Nước mắm Gành Đỏ & Bánh tráng</a></li>
+          <li><a href="shop.html?cat=banh-keo"><i class="fa-solid fa-cookie-bite"></i> Bánh phu thê & Quà vặt Xứ Nẫu</a></li>
+          <li><a href="shop.html?cat=qua-bieu"><i class="fa-solid fa-gift"></i> Combo Quà biếu Thượng Hạng</a></li>
+        </ul>
+      </div>
+
+      <ul class="nav-menu">
+        <li><a href="index.html">Trang chủ</a></li>
+        <li class="active"><a href="shop.html">Cửa hàng</a></li>
+        <li><a href="blog.html">Câu chuyện Xứ Nẫu</a></li>
+        <li><a href="about.html">Giới thiệu</a></li>
+        <li><a href="contact.html">Liên hệ</a></li>
+        <li><a href="order-tracking.html">Tra cứu đơn</a></li>
+        <li><a href="admin.html"><i class="fa-solid fa-gear"></i> Quản trị</a></li>
+      </ul>
+
+      <div class="nav-hotline">
+        <i class="fa-solid fa-phone-volume"></i>
+        <div class="nav-hotline-text">
+          <span>Hỗ trợ đặt hàng 24/7</span>
+          <strong>0988.123.456</strong>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- BREADCRUMBS -->
+  <div class="page-header" style="padding: 20px 0; margin-bottom: 25px;">
+    <div class="container">
+      <div class="breadcrumb">
+        <a href="index.html"><i class="fa-solid fa-house"></i> Trang chủ</a>
+        <span>/</span>
+        <a href="shop.html">Cửa hàng đặc sản</a>
+        <span>/</span>
+        <span class="current" id="pdpBreadcrumbTitle">Chi tiết sản phẩm</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- PDP MAIN SECTION -->
+  <section class="pdp-section container">
+    <div class="pdp-grid">
+      <!-- Left: Image Gallery & Badges -->
+      <div class="pdp-gallery">
+        <div class="pdp-main-img">
+          <img id="pdpMainImage" src="Images/sp-bo-mot-nang.svg" alt="Chi tiết sản phẩm">
+        </div>
+        <div class="pdp-thumbs" id="pdpThumbList">
+          <!-- Dynamically populated -->
+        </div>
+
+        <!-- Trust Badges Strip -->
+        <div style="display: flex; gap: 15px; margin-top: 10px; background: #f8fafc; padding: 12px; border-radius: 8px; border: 1px solid var(--border-color); justify-content: space-around;">
+          <div style="display: flex; align-items: center; gap: 8px; font-size: 12px; color: var(--primary); font-weight: 700;">
+            <i class="fa-solid fa-shield-halved" style="font-size: 18px;"></i> 100% Chính Gốc
+          </div>
+          <div style="display: flex; align-items: center; gap: 8px; font-size: 12px; color: #16a34a; font-weight: 700;">
+            <i class="fa-solid fa-check-double" style="font-size: 18px;"></i> Chuẩn VSATTP
+          </div>
+          <div style="display: flex; align-items: center; gap: 8px; font-size: 12px; color: #d97706; font-weight: 700;">
+            <i class="fa-solid fa-snowflake" style="font-size: 18px;"></i> Cấp Đông 48h
+          </div>
+        </div>
+      </div>
+
+      <!-- Right: Product Purchasing Info -->
+      <div class="pdp-info">
+        <div class="pdp-badges">
+          <span class="badge badge-primary" id="pdpCategoryBadge">ĐẶC SẢN NÚI RỪNG</span>
+          <span class="badge badge-secondary" id="pdpBadge">BÁN CHẠY NHẤT</span>
+          <span class="badge badge-success" id="pdpStockBadge"><i class="fa-solid fa-circle-check"></i> Còn hàng</span>
+        </div>
+
+        <h1 class="pdp-title" id="pdpTitle">Bò Một Nắng Muối Kiến Vàng Phú Yên</h1>
+
+        <div style="display: flex; align-items: center; gap: 15px;">
+          <div class="product-rating" style="margin: 0;">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <strong id="pdpRatingText" style="color: var(--dark); margin-left: 5px;">5.0</strong>
+          </div>
+          <span style="color: var(--text-muted); font-size: 13px;" id="pdpReviewCountText">(342 đánh giá của khách hàng)</span>
+        </div>
+
+        <div class="pdp-price-wrap">
+          <span class="pdp-price" id="pdpPrice">290.000 đ</span>
+          <span class="pdp-price-old" id="pdpOldPrice">340.000 đ</span>
+          <span class="badge badge-danger">Tiết kiệm 50.000 đ</span>
+        </div>
+
+        <p style="font-size: 14px; color: #475569; line-height: 1.6;" id="pdpShortDesc">
+          Thịt bò tơ Tuy An mềm ngọt, thớ dài đậm vị nướng than hoa thơm lừng. Tặng kèm hũ muối kiến vàng Krông Pa vị chua thanh tự nhiên.
+        </p>
+
+        <!-- Mandatory Specs Summary -->
+        <div class="pdp-meta-list">
+          <div><span><strong>Nguồn gốc xuất xứ:</strong></span> <span id="pdpOrigin">Sơn Hòa, Tỉnh Phú Yên</span></div>
+          <div><span><strong>Hạn sử dụng:</strong></span> <span id="pdpExpiry">06 tháng trong ngăn đông đá (-18°C)</span></div>
+          <div><span><strong>Bảo quản:</strong></span> <span id="pdpPreservation">Ngăn đá tủ lạnh, đóng thùng xốp giao hỏa tốc</span></div>
+        </div>
+
+        <!-- Weight / Option Selector -->
+        <div class="pdp-option-group">
+          <span class="option-label">Chọn trọng lượng / Quy cách đóng gói:</span>
+          <div class="option-buttons" id="pdpWeightOptions">
+            <!-- Dynamically populated buttons -->
+          </div>
+        </div>
+
+        <!-- Quantity & Add to Cart -->
+        <div class="pdp-purchase-actions">
+          <div class="qty-control">
+            <button class="qty-btn" id="qtyMinusBtn">-</button>
+            <input type="text" class="qty-input" id="pdpQtyInput" value="1" readonly>
+            <button class="qty-btn" id="qtyPlusBtn">+</button>
+          </div>
+
+          <button class="btn btn-secondary btn-lg" id="pdpAddToCartBtn">
+            <i class="fa-solid fa-cart-plus"></i> Thêm Vào Giỏ Hàng
+          </button>
+
+          <button class="btn btn-primary btn-lg" id="pdpBuyNowBtn">
+            <i class="fa-solid fa-bolt"></i> Mua Ngay
+          </button>
+
+          <button class="action-btn" id="pdpWishlistBtn" title="Thêm vào yêu thích" style="width: 48px; height: 48px; font-size: 18px;">
+            <i class="fa-regular fa-heart"></i>
+          </button>
+        </div>
+
+        <!-- Extra Note for Cold Packaging -->
+        <div style="background: #fef3c7; border: 1px solid #fde68a; padding: 10px 15px; border-radius: 6px; font-size: 13px; color: #92400e; display: flex; align-items: center; gap: 8px;">
+          <i class="fa-solid fa-box-archive"></i>
+          <span>Món ăn sẽ được đóng <strong>thùng xốp ướp đá gel cấp đông</strong> giữ nhiệt 48h để đảm bảo trọn vẹn vị tươi ngọt khi đến tay bạn!</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- TABS: CHI TIẾT SẢN PHẨM, HƯỚNG DẪN CHẾ BIẾN, VIDEO, ĐÁNH GIÁ -->
+    <div class="pdp-tabs-wrap">
+      <div class="pdp-tab-headers">
+        <button class="pdp-tab-btn active" data-tab="tab-desc">Mô Tả & Nguồn Gốc</button>
+        <button class="pdp-tab-btn" data-tab="tab-cooking">Hướng Dẫn Chế Biến & Bảo Quản</button>
+        <button class="pdp-tab-btn" data-tab="tab-video">Video Thực Tế</button>
+        <button class="pdp-tab-btn" data-tab="tab-reviews">Đánh Giá Từ Khách Hàng (<span id="tabReviewCount">3</span>)</button>
+      </div>
+
+      <!-- Tab 1: Mô Tả -->
+      <div class="pdp-tab-content active" id="tab-desc">
+        <h3 style="font-size: 20px; font-weight: 700; color: var(--dark); margin-bottom: 12px;">Câu Chuyện Nguồn Gốc Đặc Sản</h3>
+        <p id="pdpFullDesc" style="margin-bottom: 15px; font-size: 15px;"></p>
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 20px;">
+          <div style="background: #f8fafc; padding: 20px; border-radius: 8px; border: 1px solid var(--border-color);">
+            <h4 style="color: var(--primary); font-size: 16px; margin-bottom: 10px;"><i class="fa-solid fa-medal"></i> Cam Kết Chất Lượng</h4>
+            <ul style="font-size: 14px; line-height: 1.8; color: var(--text-main);">
+              <li>✓ 100% nguyên liệu tươi sạch thu mua tại địa phương Phú Yên.</li>
+              <li>✓ Không sử dụng hóa chất tạo màu hoặc chất bảo quản độc hại.</li>
+              <li>✓ Quy trình chế biến đạt tiêu chuẩn Vệ sinh An toàn Thực phẩm.</li>
+              <li>✓ Đóng gói hút chân không hai lớp chống va đập.</li>
+            </ul>
+          </div>
+          <div style="background: #f8fafc; padding: 20px; border-radius: 8px; border: 1px solid var(--border-color);">
+            <h4 style="color: var(--secondary); font-size: 16px; margin-bottom: 10px;"><i class="fa-solid fa-truck-ramp-box"></i> Vận Chuyển Cấp Đông</h4>
+            <ul style="font-size: 14px; line-height: 1.8; color: var(--text-main);">
+              <li>✓ Thùng xốp chuyên dụng dán băng keo niêm phong kín.</li>
+              <li>✓ Đá gel khô giữ nhiệt âm sâu 48 tiếng liên tục.</li>
+              <li>✓ Hợp tác hỏa tốc cùng Viettel Post & GHN.</li>
+              <li>✓ Khách hàng được đồng kiểm trước khi nhận hàng.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tab 2: Chế Biến -->
+      <div class="pdp-tab-content" id="tab-cooking">
+        <h3 style="font-size: 20px; font-weight: 700; color: var(--dark); margin-bottom: 12px;">Bí Quyết Chế Biến Chuẩn Vị Người Phú Yên</h3>
+        <div style="background: #eff6ff; border-left: 4px solid var(--primary); padding: 15px 20px; border-radius: 0 8px 8px 0; margin-bottom: 20px;">
+          <p id="pdpCookingGuideText" style="font-size: 15px; line-height: 1.8; color: #1e293b;"></p>
+        </div>
+        <h4 style="font-size: 16px; font-weight: 700; color: var(--dark); margin-bottom: 8px;">Hướng dẫn bảo quản tại nhà:</h4>
+        <p id="pdpPreservationText" style="font-size: 14px; color: var(--text-muted);"></p>
+      </div>
+
+      <!-- Tab 3: Video -->
+      <div class="pdp-tab-content" id="tab-video">
+        <h3 style="font-size: 20px; font-weight: 700; color: var(--dark); margin-bottom: 15px;">Thước Phim Quay Cận Cảnh Đặc Sản</h3>
+        <div style="max-width: 700px; margin: 0 auto; border-radius: 12px; overflow: hidden; box-shadow: var(--shadow-md);">
+          <video controls style="width: 100%; display: block;" poster="Images/hero-banner.svg">
+            <source src="Videos/phu-yen-specialty.mp4" type="video/mp4">
+            Trình duyệt không hỗ trợ video.
+          </video>
+        </div>
+      </div>
+
+      <!-- Tab 4: Đánh Giá & Bình Luận -->
+      <div class="pdp-tab-content" id="tab-reviews">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+          <h3 style="font-size: 20px; font-weight: 700; color: var(--dark);">Đánh Giá Từ Khách Hàng Đã Mua</h3>
+          <span style="font-size: 14px; color: var(--text-muted);">Đánh giá thật 100% từ người mua</span>
+        </div>
+
+        <!-- Sample Reviews List -->
+        <div id="pdpReviewsList">
+          <div class="review-item">
+            <img src="Images/avatar-1.svg" alt="Nguyễn Tuấn Anh" class="review-avatar">
+            <div class="review-body">
+              <h4>Nguyễn Tuấn Anh <span style="font-size: 12px; font-weight: normal; color: #10b981;">✓ Đã mua hàng từ Tuy Hòa</span></h4>
+              <div class="review-stars">★★★★★</div>
+              <p style="font-size: 14px; color: #475569;">
+                "Bò một nắng chuẩn vị quê Phú Yên luôn! Thịt nướng than hoa thơm nức mũi, chấm với hũ muối kiến vàng chua thanh rất bắt mồi. Đóng thùng xốp giao ra Hà Nội mà vẫn đông cứng ngắc. Quá hài lòng!"
+              </p>
+            </div>
+          </div>
+
+          <div class="review-item">
+            <img src="Images/avatar-2.svg" alt="Lê Thu Hà" class="review-avatar">
+            <div class="review-body">
+              <h4>Lê Thu Hà <span style="font-size: 12px; font-weight: normal; color: #10b981;">✓ Đã mua hàng từ TP.HCM</span></h4>
+              <div class="review-stars">★★★★★</div>
+              <p style="font-size: 14px; color: #475569;">
+                "Mắt cá ngừ to và tươi ngon, nấu thố đất tiềm thuốc bắc theo đúng hướng dẫn trên web ăn béo ngậy không hề bị tanh. Sẽ ủng hộ cửa hàng dài dài!"
+              </p>
+            </div>
+          </div>
+
+          <div class="review-item">
+            <img src="Images/avatar-3.svg" alt="Trần Minh Quang" class="review-avatar">
+            <div class="review-body">
+              <h4>Trần Minh Quang <span style="font-size: 12px; font-weight: normal; color: #10b981;">✓ Đã mua hàng từ Đà Nẵng</span></h4>
+              <div class="review-stars">★★★★★</div>
+              <p style="font-size: 14px; color: #475569;">
+                "Nước mắm Gành Đỏ thơm lừng, 40 độ đạm chấm thịt luộc ăn với bánh tráng Hòa Đa cuốn rau sống là chuẩn bài Xứ Nẫu rồi. Đóng gói rất kỹ, chai thủy tinh không bị trầy xước."
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Add Review Form -->
+        <div class="review-form-box">
+          <h4 style="font-size: 16px; font-weight: 700; color: var(--dark); margin-bottom: 12px;">Gửi Đánh Giá Của Bạn</h4>
+          <form id="addReviewForm" onsubmit="handleReviewSubmit(event)">
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px;">
+              <div class="form-group">
+                <label>Họ và tên của bạn:</label>
+                <input type="text" class="form-control" id="revName" placeholder="Nhập tên..." required>
+              </div>
+              <div class="form-group">
+                <label>Đánh giá sao:</label>
+                <select class="form-control" id="revRating">
+                  <option value="5">★★★★★ - Tuyệt vời (5 sao)</option>
+                  <option value="4">★★★★☆ - Hài lòng (4 sao)</option>
+                  <option value="3">★★★☆☆ - Bình thường (3 sao)</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-group">
+              <label>Nội dung nhận xét:</label>
+              <textarea class="form-control" id="revComment" rows="3" placeholder="Chia sẻ cảm nhận của bạn về độ tươi ngon, cách đóng gói..." required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary btn-sm">Gửi Đánh Giá</button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- RELATED PRODUCTS -->
+    <div style="margin-top: 60px;">
+      <div class="section-title">
+        <h2>Đặc Sản Cùng Danh Mục</h2>
+        <p>Gợi ý thêm những món ngon đặc trưng khó cưỡng</p>
+      </div>
+      <div class="product-grid" id="relatedProductsGrid">
+        <!-- Rendered dynamically -->
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="main-footer">
+    <div class="container">
+      <div class="footer-bottom" style="border: none; padding: 0; text-align: center;">
+        <p>© 2026 Đặc Sản Phú Yên - Hồn Quê Xứ Nẫu. Thiết kế phục vụ bài tập môn Thiết kế Web (MSSV: 6651071024).</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="Scripts/products-data.js"></script>
+  <script src="Scripts/main.js"></script>
+  <script>
+    let currentProduct = null;
+    let selectedUnitOption = null;
+
+    function initPDP() {
+      const urlParams = new URLSearchParams(window.location.search);
+      const prodId = urlParams.get('id') || 'sp-01'; // Mặc định hiển thị Mắt cá ngừ hoặc Bò 1 nắng
+
+      if (typeof getProductById !== 'function') return;
+      currentProduct = getProductById(prodId) || PRODUCTS[0];
+
+      // Gắn dữ liệu vào DOM
+      document.title = `${currentProduct.name} - Đặc Sản Phú Yên`;
+      document.getElementById('pdpBreadcrumbTitle').textContent = currentProduct.name;
+      document.getElementById('pdpTitle').textContent = currentProduct.name;
+      document.getElementById('pdpMainImage').src = currentProduct.image;
+      document.getElementById('pdpPrice').textContent = formatPrice(currentProduct.price);
+      if (currentProduct.oldPrice) {
+        document.getElementById('pdpOldPrice').textContent = formatPrice(currentProduct.oldPrice);
+      } else {
+        document.getElementById('pdpOldPrice').style.display = 'none';
+      }
+
+      document.getElementById('pdpCategoryBadge').textContent = currentProduct.categoryName;
+      document.getElementById('pdpBadge').textContent = currentProduct.badge;
+      document.getElementById('pdpRatingText').textContent = currentProduct.rating.toFixed(1);
+      document.getElementById('pdpReviewCountText').textContent = `(${currentProduct.reviewCount} đánh giá của khách hàng)`;
+      document.getElementById('pdpShortDesc').textContent = currentProduct.description;
+      document.getElementById('pdpFullDesc').textContent = currentProduct.description;
+      document.getElementById('pdpOrigin').textContent = currentProduct.origin;
+      document.getElementById('pdpExpiry').textContent = currentProduct.expiry;
+      document.getElementById('pdpPreservation').textContent = currentProduct.preservation;
+      document.getElementById('pdpCookingGuideText').textContent = currentProduct.cookingGuide;
+      document.getElementById('pdpPreservationText').textContent = currentProduct.preservation;
+
+      // Render weight options
+      const optContainer = document.getElementById('pdpWeightOptions');
+      if (optContainer && currentProduct.weightOptions) {
+        optContainer.innerHTML = currentProduct.weightOptions.map((opt, i) => `
+          <button class="opt-btn ${i === 0 ? 'active' : ''}" onclick="selectWeightOption(this, '${opt}')">
+            ${opt}
+          </button>
+        `).join('');
+        selectedUnitOption = currentProduct.weightOptions[0];
+      }
+
+      // Quantity buttons
+      const qtyInput = document.getElementById('pdpQtyInput');
+      document.getElementById('qtyMinusBtn').addEventListener('click', () => {
+        let val = parseInt(qtyInput.value, 10);
+        if (val > 1) qtyInput.value = val - 1;
+      });
+      document.getElementById('qtyPlusBtn').addEventListener('click', () => {
+        let val = parseInt(qtyInput.value, 10);
+        qtyInput.value = val + 1;
+      });
+
+      // Add to Cart & Buy Now
+      document.getElementById('pdpAddToCartBtn').addEventListener('click', () => {
+        const qty = parseInt(qtyInput.value, 10);
+        addToCart(currentProduct.id, qty, selectedUnitOption);
+      });
+
+      document.getElementById('pdpBuyNowBtn').addEventListener('click', () => {
+        const qty = parseInt(qtyInput.value, 10);
+        addToCart(currentProduct.id, qty, selectedUnitOption);
+        window.location.href = 'cart.html';
+      });
+
+      // Wishlist
+      document.getElementById('pdpWishlistBtn').addEventListener('click', () => {
+        toggleWishlist(currentProduct.id);
+      });
+
+      // Tab switcher
+      const tabBtns = document.querySelectorAll('.pdp-tab-btn');
+      const tabContents = document.querySelectorAll('.pdp-tab-content');
+      tabBtns.forEach(btn => {
+        btn.addEventListener('click', function() {
+          tabBtns.forEach(b => b.classList.remove('active'));
+          tabContents.forEach(c => c.classList.remove('active'));
+          this.classList.add('active');
+          const tabId = this.getAttribute('data-tab');
+          const target = document.getElementById(tabId);
+          if (target) target.classList.add('active');
+        });
+      });
+
+      // Render Related Products
+      const relGrid = document.getElementById('relatedProductsGrid');
+      if (relGrid) {
+        const related = PRODUCTS.filter(p => p.category === currentProduct.category && p.id !== currentProduct.id).slice(0, 4);
+        relGrid.innerHTML = related.map(p => renderProductCard(p)).join('');
+      }
+    }
+
+    function selectWeightOption(btn, opt) {
+      document.querySelectorAll('.opt-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      selectedUnitOption = opt;
+    }
+
+    function handleReviewSubmit(e) {
+      e.preventDefault();
+      const name = document.getElementById('revName').value.trim();
+      const comment = document.getElementById('revComment').value.trim();
+      const rating = document.getElementById('revRating').value;
+
+      const list = document.getElementById('pdpReviewsList');
+      const newReview = document.createElement('div');
+      newReview.className = 'review-item';
+      newReview.innerHTML = `
+        <img src="Images/avatar-1.svg" alt="${name}" class="review-avatar">
+        <div class="review-body">
+          <h4>${name} <span style="font-size: 12px; font-weight: normal; color: #10b981;">✓ Khách hàng vừa gửi</span></h4>
+          <div class="review-stars">${'★'.repeat(rating)}${'☆'.repeat(5 - rating)}</div>
+          <p style="font-size: 14px; color: #475569;">"${comment}"</p>
+        </div>
+      `;
+      list.prepend(newReview);
+      document.getElementById('addReviewForm').reset();
+      showToast('Cảm ơn bạn!', 'Đánh giá của bạn đã được đăng thành công.', 'success');
+    }
+
+    document.addEventListener('DOMContentLoaded', initPDP);
+  </script>
+</body>
+</html>

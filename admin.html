@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bảng Điều Khiển Quản Trị Viên (Admin) | Đặc Sản Phú Yên</title>
+  <meta name="description" content="Hệ thống quản lý sản phẩm, đơn hàng, khách hàng, mã khuyến mãi và thống kê doanh thu đặc sản Phú Yên.">
+  <link rel="icon" type="image/svg+xml" href="Images/logo.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Merriweather:ital,wght@0,700;0,900;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <link rel="stylesheet" href="Styles/style.css">
+  <link rel="stylesheet" href="Styles/responsive.css">
+</head>
+<body style="background: #f1f5f9;">
+
+  <!-- ADMIN TOP NAV -->
+  <header style="background: #002b49; color: #fff; padding: 12px 0;">
+    <div class="container" style="display: flex; justify-content: space-between; align-items: center;">
+      <div style="display: flex; align-items: center; gap: 15px;">
+        <a href="index.html">
+          <img src="Images/logo.svg" alt="Logo" style="height: 38px; filter: brightness(0) invert(1);">
+        </a>
+        <span style="background: var(--secondary); color: #fff; font-size: 11px; font-weight: 800; padding: 3px 8px; border-radius: 4px;">
+          ADMIN PORTAL
+        </span>
+      </div>
+
+      <div style="display: flex; align-items: center; gap: 20px; font-size: 14px;">
+        <a href="index.html" style="color: #cbd5e1;"><i class="fa-solid fa-arrow-up-right-from-square"></i> Xem Cửa Hàng</a>
+        <div style="display: flex; align-items: center; gap: 8px;">
+          <img src="Images/avatar-1.svg" alt="Admin" style="width: 32px; height: 32px; border-radius: 50%;">
+          <span>Quản Trị Viên Phú Yên</span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ADMIN BODY -->
+  <main class="container" style="margin-top: 30px; margin-bottom: 60px;">
+    <!-- Title & Export -->
+    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 25px; flex-wrap: wrap; gap: 15px;">
+      <div>
+        <h1 style="font-size: 24px; font-weight: 800; color: var(--dark); margin-bottom: 5px;">
+          Bảng Điều Khiển Quản Trị Hệ Thống (Mục 4)
+        </h1>
+        <p style="font-size: 13px; color: var(--text-muted);">
+          Theo dõi doanh thu, quản lý sản phẩm, đơn hàng và phân nhóm khách hàng Xứ Nẫu
+        </p>
+      </div>
+
+      <div style="display: flex; gap: 10px;">
+        <button class="btn btn-primary" onclick="openAddProductModal()">
+          <i class="fa-solid fa-plus"></i> Thêm Sản Phẩm Mới
+        </button>
+        <button class="btn btn-outline" onclick="window.print()">
+          <i class="fa-solid fa-print"></i> Xuất Báo Cáo
+        </button>
+      </div>
+    </div>
+
+    <!-- 1. KPI STATS CARDS -->
+    <div class="admin-stats-grid">
+      <div class="stat-card">
+        <div class="stat-icon stat-blue"><i class="fa-solid fa-sack-dollar"></i></div>
+        <div class="stat-info">
+          <h3 id="adminStatRevenue">28.450.000 đ</h3>
+          <p>Tổng Doanh Thu</p>
+        </div>
+      </div>
+
+      <div class="stat-card">
+        <div class="stat-icon stat-green"><i class="fa-solid fa-cart-shopping"></i></div>
+        <div class="stat-info">
+          <h3 id="adminStatOrders">44</h3>
+          <p>Đơn Hàng Toàn Quốc</p>
+        </div>
+      </div>
+
+      <div class="stat-card">
+        <div class="stat-icon stat-orange"><i class="fa-solid fa-boxes-stacked"></i></div>
+        <div class="stat-info">
+          <h3 id="adminStatProducts">18</h3>
+          <p>Sản Phẩm Trong Kho</p>
+        </div>
+      </div>
+
+      <div class="stat-card">
+        <div class="stat-icon stat-purple"><i class="fa-solid fa-arrow-trend-up"></i></div>
+        <div class="stat-info">
+          <h3 id="adminStatConversion">4.2%</h3>
+          <p>Tỷ Lệ Chuyển Đổi</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- 2. REVENUE CHART (HTML5 CANVAS) -->
+    <div class="admin-card">
+      <div class="admin-card-header">
+        <h3><i class="fa-solid fa-chart-column" style="color: var(--primary);"></i> Biểu Đồ Doanh Thu Theo Tháng (Triệu VNĐ)</h3>
+        <span style="font-size: 12px; color: var(--text-muted);">Cập nhật tự động theo thời gian thực</span>
+      </div>
+      <div style="text-align: center; overflow-x: auto;">
+        <canvas id="adminRevenueCanvas" width="800" height="240" style="max-width: 100%; height: auto;"></canvas>
+      </div>
+    </div>
+
+    <!-- 3. QUẢN LÝ ĐƠN HÀNG MỚI -->
+    <div class="admin-card">
+      <div class="admin-card-header">
+        <h3><i class="fa-solid fa-truck-ramp-box" style="color: var(--secondary);"></i> Quản Lý Đơn Hàng Mới Nhận</h3>
+        <span style="font-size: 13px; color: var(--text-muted);">Cập nhật trạng thái và in vận đơn cấp đông Viettel Post</span>
+      </div>
+      <div class="cart-table-wrap" style="margin-bottom: 0;">
+        <table class="cart-table">
+          <thead>
+            <tr>
+              <th>Mã Đơn</th>
+              <th>Khách Hàng</th>
+              <th>Số Điện Thoại</th>
+              <th>Tổng Tiền</th>
+              <th>Trạng Thái</th>
+              <th>Thao Tác</th>
+            </tr>
+          </thead>
+          <tbody id="adminOrdersTbody">
+            <!-- Rendered by admin.js -->
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- 4. QUẢN LÝ SẢN PHẨM & KHO HÀNG -->
+    <div class="admin-card">
+      <div class="admin-card-header">
+        <h3><i class="fa-solid fa-boxes-packing" style="color: #10b981;"></i> Quản Lý Sản Phẩm & Nhãn Mùa Vụ / Tồn Kho</h3>
+        <button class="btn btn-sm btn-primary" onclick="openAddProductModal()">
+          <i class="fa-solid fa-plus"></i> Thêm đặc sản
+        </button>
+      </div>
+      <div class="cart-table-wrap" style="margin-bottom: 0;">
+        <table class="cart-table">
+          <thead>
+            <tr>
+              <th>STT</th>
+              <th>Tên Đặc Sản</th>
+              <th>Danh Mục</th>
+              <th>Giá Bán</th>
+              <th>Trạng Thái Kho</th>
+              <th>Hành Động</th>
+            </tr>
+          </thead>
+          <tbody id="adminProductsTbody">
+            <!-- Rendered by admin.js -->
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- 5. PHÂN NHÓM KHÁCH HÀNG & MÃ KHUYẾN MÃI -->
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 25px;">
+      <!-- Khách hàng -->
+      <div class="admin-card">
+        <div class="admin-card-header">
+          <h3><i class="fa-solid fa-users" style="color: #9333ea;"></i> Phân Nhóm Khách Hàng</h3>
+        </div>
+        <ul style="font-size: 14px; line-height: 2;">
+          <li style="display: flex; justify-content: space-between; border-bottom: 1px solid #f1f5f9; padding: 6px 0;">
+            <span><i class="fa-solid fa-user-tag" style="color: #3b82f6;"></i> Khách Mới Mua Lần Đầu</span>
+            <strong style="color: var(--primary);">28 khách</strong>
+          </li>
+          <li style="display: flex; justify-content: space-between; border-bottom: 1px solid #f1f5f9; padding: 6px 0;">
+            <span><i class="fa-solid fa-crown" style="color: #f59e0b;"></i> Khách VIP Thân Thiết (> 2 triệu)</span>
+            <strong style="color: #b45309;">14 khách</strong>
+          </li>
+          <li style="display: flex; justify-content: space-between; padding: 6px 0;">
+            <span><i class="fa-solid fa-envelope" style="color: #10b981;"></i> Đã Đăng Ký Email Nhận Tin</span>
+            <strong style="color: #16a34a;">85 thành viên</strong>
+          </li>
+        </ul>
+        <button class="btn btn-outline btn-sm" style="width: 100%; margin-top: 15px;" onclick="showToast('Email Marketing', 'Đã tạo chiến dịch gửi mã giảm giá 50k cho nhóm Khách VIP!', 'success')">
+          <i class="fa-solid fa-paper-plane"></i> Gửi Email Khuyến Mãi Nhóm VIP
+        </button>
+      </div>
+
+      <!-- Khuyến mãi -->
+      <div class="admin-card">
+        <div class="admin-card-header">
+          <h3><i class="fa-solid fa-tags" style="color: #ea580c;"></i> Mã Giảm Giá Đang Chạy</h3>
+        </div>
+        <ul style="font-size: 14px; line-height: 2;">
+          <li style="display: flex; justify-content: space-between; border-bottom: 1px solid #f1f5f9; padding: 6px 0;">
+            <div><strong>PHUYEN10</strong> - <span style="color: #64748b;">Giảm 10% tổng đơn</span></div>
+            <span class="badge badge-success">Đang kích hoạt</span>
+          </li>
+          <li style="display: flex; justify-content: space-between; border-bottom: 1px solid #f1f5f9; padding: 6px 0;">
+            <div><strong>XUNAU50K</strong> - <span style="color: #64748b;">Giảm 50k (đơn > 500k)</span></div>
+            <span class="badge badge-success">Đang kích hoạt</span>
+          </li>
+          <li style="display: flex; justify-content: space-between; padding: 6px 0;">
+            <div><strong>FREESHIP</strong> - <span style="color: #64748b;">Miễn phí ship</span></div>
+            <span class="badge badge-success">Đang kích hoạt</span>
+          </li>
+        </ul>
+        <button class="btn btn-secondary btn-sm" style="width: 100%; margin-top: 15px;" onclick="promptNewVoucher()">
+          <i class="fa-solid fa-plus"></i> Tạo Mã Voucher Mới
+        </button>
+      </div>
+    </div>
+  </main>
+
+  <!-- MODAL THÊM SẢN PHẨM MỚI -->
+  <div class="modal-overlay" id="addProductModal">
+    <div class="modal-container" style="max-width: 550px; padding: 30px;">
+      <button class="modal-close-btn" onclick="closeAddProductModal()"><i class="fa-solid fa-xmark"></i></button>
+      <h2 style="font-size: 20px; font-weight: 800; color: var(--primary); margin-bottom: 15px;">Thêm Đặc Sản Phú Yên Mới</h2>
+      <form id="addProductForm">
+        <div class="form-group">
+          <label>Tên đặc sản (*):</label>
+          <input type="text" class="form-control" id="newProdName" placeholder="Ví dụ: Cá ngừ đại dương sấy tiêu..." required>
+        </div>
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px;">
+          <div class="form-group">
+            <label>Giá bán (VNĐ) (*):</label>
+            <input type="number" class="form-control" id="newProdPrice" placeholder="150000" required>
+          </div>
+          <div class="form-group">
+            <label>Danh mục (*):</label>
+            <select class="form-control" id="newProdCat" required>
+              <option value="hai-san">Hải sản đặc trưng</option>
+              <option value="thit-nui-rung">Thịt & Núi rừng</option>
+              <option value="gia-vi">Gia vị & Bánh tráng</option>
+              <option value="banh-keo">Bánh kẹo & Quà vặt</option>
+            </select>
+          </div>
+        </div>
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px;">
+          <div class="form-group">
+            <label>Quy cách đóng gói:</label>
+            <input type="text" class="form-control" id="newProdUnit" placeholder="Gói 500g, Hũ 100g...">
+          </div>
+          <div class="form-group">
+            <label>Nơi sản xuất tại Phú Yên:</label>
+            <input type="text" class="form-control" id="newProdOrigin" placeholder="Tuy Hòa, Phú Yên">
+          </div>
+        </div>
+        <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 10px;">
+          Lưu Đặc Sản Vào Kho Hàng
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="Scripts/products-data.js"></script>
+  <script src="Scripts/main.js"></script>
+  <script src="Scripts/admin.js"></script>
+  <script>
+    function promptNewVoucher() {
+      const code = prompt('Nhập mã voucher mới (viết hoa):', 'TETPHUYEN');
+      if (code) {
+        showToast('Tạo Voucher', `Đã tạo và kích hoạt mã ${code} giảm 20.000 đ!`, 'success');
+      }
+    }
+  </script>
+</body>
+</html>

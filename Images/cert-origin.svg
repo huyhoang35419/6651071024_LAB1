@@ -1,0 +1,7 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 150 150" width="150" height="150">
+  <circle cx="75" cy="75" r="70" fill="#eff6ff" stroke="#2563eb" stroke-width="4"/>
+  <circle cx="75" cy="75" r="58" fill="none" stroke="#2563eb" stroke-width="1.5" stroke-dasharray="4,3"/>
+  <text x="75" y="62" font-family="'Segoe UI', sans-serif" font-weight="900" font-size="24" fill="#1d4ed8" text-anchor="middle">100%</text>
+  <text x="75" y="85" font-family="'Segoe UI', sans-serif" font-weight="800" font-size="11" fill="#1e40af" text-anchor="middle">CHÍNH GỐC</text>
+  <text x="75" y="105" font-family="'Segoe UI', sans-serif" font-weight="900" font-size="13" fill="#dc2626" text-anchor="middle">XỨ NẪU</text>
+</svg>

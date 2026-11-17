@@ -1,0 +1,7 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 150 150" width="150" height="150">
+  <circle cx="75" cy="75" r="70" fill="#ecfdf5" stroke="#10b981" stroke-width="4"/>
+  <circle cx="75" cy="75" r="58" fill="none" stroke="#10b981" stroke-width="1.5" stroke-dasharray="4,3"/>
+  <path d="M 50 75 L 70 95 L 105 55" fill="none" stroke="#059669" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="75" y="120" font-family="'Segoe UI', sans-serif" font-weight="800" font-size="11" fill="#065f46" text-anchor="middle">CHỨNG NHẬN</text>
+  <text x="75" y="134" font-family="'Segoe UI', sans-serif" font-weight="900" font-size="12" fill="#047857" text-anchor="middle">VSATTP</text>
+</svg>

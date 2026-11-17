@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Về Chúng Tôi | Thương Hiệu Đặc Sản Phú Yên</title>
+  <meta name="description" content="Hành trình giữ gìn và phát triển đặc sản xứ Nẫu Phú Yên. Chứng nhận VSATTP, OCOP 4 sao và sứ mệnh mang hương vị miền Trung đến mọi miền Tổ quốc.">
+  <link rel="icon" type="image/svg+xml" href="Images/logo.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Merriweather:ital,wght@0,700;0,900;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <link rel="stylesheet" href="Styles/style.css">
+  <link rel="stylesheet" href="Styles/responsive.css">
+</head>
+<body>
+
+  <!-- TOP BAR -->
+  <header class="top-bar">
+    <div class="container">
+      <div class="top-bar-left">
+        <span><i class="fa-solid fa-phone"></i> Hotline Tuy Hòa: <strong>0988.123.456</strong></span>
+        <span><i class="fa-solid fa-envelope"></i> dacsanxunau@phuyen.vn</span>
+        <span class="top-bar-highlight"><i class="fa-solid fa-snowflake"></i> Giao lạnh hỏa tốc toàn quốc - Đóng thùng xốp 48h</span>
+      </div>
+      <div class="top-bar-right">
+        <a href="order-tracking.html"><i class="fa-solid fa-route"></i> Tra cứu đơn hàng</a>
+        <span>|</span>
+        <a href="admin.html"><i class="fa-solid fa-user-shield"></i> Trang Quản Trị</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- MAIN HEADER -->
+  <div class="main-header">
+    <div class="container">
+      <div class="logo">
+        <a href="index.html">
+          <img src="Images/logo.svg" alt="Đặc Sản Phú Yên - Hồn Quê Xứ Nẫu">
+        </a>
+      </div>
+
+      <div class="header-search">
+        <form class="search-form" id="headerSearchForm">
+          <input type="text" class="search-input" id="searchInput" placeholder="Tìm kiếm bò một nắng, mắt cá ngừ, nước mắm..." autocomplete="off">
+          <button type="submit" class="search-btn"><i class="fa-solid fa-magnifying-glass"></i></button>
+        </form>
+        <div class="search-suggest" id="searchSuggestBox"></div>
+      </div>
+
+      <div class="header-actions">
+        <a href="shop.html" class="action-item"><i class="fa-regular fa-heart"></i><span class="badge-count wishlist-badge-count">0</span></a>
+        <a href="cart.html" class="cart-widget">
+          <div class="action-item"><i class="fa-solid fa-basket-shopping"></i><span class="badge-count cart-badge-count">0</span></div>
+          <div class="cart-info"><span>Giỏ hàng</span><span class="cart-total-price">0 đ</span></div>
+        </a>
+        <button class="mobile-menu-btn" id="mobileMenuBtn"><i class="fa-solid fa-bars"></i></button>
+      </div>
+    </div>
+  </div>
+
+  <!-- NAVIGATION BAR -->
+  <nav class="main-nav">
+    <div class="container">
+      <div class="dept-menu">
+        <button class="dept-btn" id="deptBtn">
+          <span><i class="fa-solid fa-bars"></i> TẤT CẢ DANH MỤC</span>
+          <i class="fa-solid fa-chevron-down"></i>
+        </button>
+        <ul class="dept-dropdown" id="deptDropdown">
+          <li><a href="shop.html?cat=hai-san"><i class="fa-solid fa-fish"></i> Hải sản đặc trưng Phú Yên</a></li>
+          <li><a href="shop.html?cat=thit-nui-rung"><i class="fa-solid fa-drumstick-bite"></i> Bò một nắng & Muối kiến vàng</a></li>
+          <li><a href="shop.html?cat=gia-vi"><i class="fa-solid fa-mortar-pestle"></i> Nước mắm Gành Đỏ & Bánh tráng</a></li>
+          <li><a href="shop.html?cat=banh-keo"><i class="fa-solid fa-cookie-bite"></i> Bánh phu thê & Quà vặt Xứ Nẫu</a></li>
+          <li><a href="shop.html?cat=qua-bieu"><i class="fa-solid fa-gift"></i> Combo Quà biếu Thượng Hạng</a></li>
+        </ul>
+      </div>
+
+      <ul class="nav-menu">
+        <li><a href="index.html">Trang chủ</a></li>
+        <li><a href="shop.html">Cửa hàng</a></li>
+        <li><a href="blog.html">Câu chuyện Xứ Nẫu</a></li>
+        <li class="active"><a href="about.html">Giới thiệu</a></li>
+        <li><a href="contact.html">Liên hệ</a></li>
+        <li><a href="order-tracking.html">Tra cứu đơn</a></li>
+        <li><a href="admin.html"><i class="fa-solid fa-gear"></i> Quản trị</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- BREADCRUMB -->
+  <div class="page-header" style="padding: 20px 0; margin-bottom: 30px;">
+    <div class="container">
+      <div class="breadcrumb">
+        <a href="index.html">Trang chủ</a>
+        <span>/</span>
+        <span class="current">Giới thiệu về chúng tôi</span>
+      </div>
+      <h1 style="font-size: 26px; margin-top: 5px;">Hành Trình Gìn Giữ Hồn Quê Xứ Nẫu</h1>
+    </div>
+  </div>
+
+  <!-- ABOUT CONTENT -->
+  <main class="container" style="margin-bottom: 70px;">
+    <!-- Section 1: Giới thiệu thương hiệu -->
+    <div style="display: grid; grid-template-columns: 1.2fr 1fr; gap: 40px; align-items: center; margin-bottom: 60px;">
+      <div>
+        <span class="badge badge-secondary" style="margin-bottom: 12px;">CÂU CHUYỆN KHỞI NGUỒN</span>
+        <h2 style="font-family: var(--font-heading); font-size: 32px; color: var(--primary-dark); line-height: 1.3; margin-bottom: 18px;">
+          Đưa Ẩm Thực Phú Yên Vươn Xa Khắp Mọi Miền Đất Nước
+        </h2>
+        <p style="font-size: 15px; color: #334155; line-height: 1.8; margin-bottom: 15px;">
+          Sinh ra và lớn lên trên mảnh đất nắng gió Phú Yên - nơi có vịnh Vũng Rô biển xanh ngăn ngắt, những ghềnh đá đĩa kỳ vĩ và cánh đồng lúa Tuy Hòa bạt ngàn, chúng tôi luôn ấp ủ ước mơ mang hương vị mộc mạc mà đậm đà của quê hương đến với bàn ăn của từng gia đình Việt.
+        </p>
+        <p style="font-size: 15px; color: #334155; line-height: 1.8; margin-bottom: 20px;">
+          Mỗi miếng <strong>Bò một nắng</strong>, từng thố <strong>Mắt cá ngừ</strong> hay từng giọt <strong>Nước mắm Gành Đỏ</strong> không đơn thuần chỉ là thực phẩm, mà là mồ hôi của ngư dân bám biển, là tâm huyết của những nghệ nhân làng nghề gìn giữ công thức truyền thống qua hàng trăm năm.
+        </p>
+        <div style="display: flex; gap: 20px;">
+          <div style="border-left: 3px solid var(--secondary); padding-left: 15px;">
+            <strong style="font-size: 24px; color: var(--primary); display: block;">100%</strong>
+            <span style="font-size: 13px; color: var(--text-muted);">Chính gốc sản xuất tại Phú Yên</span>
+          </div>
+          <div style="border-left: 3px solid var(--primary); padding-left: 15px;">
+            <strong style="font-size: 24px; color: var(--secondary); display: block;">15.000+</strong>
+            <span style="font-size: 13px; color: var(--text-muted);">Khách hàng tin tưởng toàn quốc</span>
+          </div>
+        </div>
+      </div>
+
+      <div style="border-radius: 14px; overflow: hidden; box-shadow: var(--shadow-lg); border: 2px solid var(--border-color);">
+        <img src="Images/hero-banner.svg" alt="Phú Yên quê tôi" style="width: 100%;">
+      </div>
+    </div>
+
+    <!-- Section 2: Chứng Nhận & Tiêu Chuẩn Chất Lượng (Mục 3 & 5 của đề bài) -->
+    <div style="background: #f8fafc; border-radius: 16px; border: 1px solid var(--border-color); padding: 45px; margin-bottom: 60px;">
+      <div class="section-title">
+        <h2>Chứng Nhận Chất Lượng & Vệ Sinh ATTP</h2>
+        <p>Cam kết minh bạch nguồn gốc và chất lượng vệ sinh an toàn thực phẩm hàng đầu</p>
+      </div>
+
+      <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px;">
+        <div style="background: #fff; padding: 25px; border-radius: 12px; border: 1px solid var(--border-color); text-align: center;">
+          <img src="Images/cert-vsattp.svg" alt="VSATTP" style="width: 90px; height: 90px; margin: 0 auto 15px;">
+          <h3 style="font-size: 17px; font-weight: 700; color: var(--dark); margin-bottom: 8px;">Chứng Nhận VSATTP</h3>
+          <p style="font-size: 13px; color: var(--text-muted); line-height: 1.6;">
+            Cấp bởi Chi cục Quản lý Chất lượng Nông Lâm sản và Thủy sản tỉnh Phú Yên. Đảm bảo 100% không phụ gia hóa học độc hại.
+          </p>
+        </div>
+
+        <div style="background: #fff; padding: 25px; border-radius: 12px; border: 1px solid var(--border-color); text-align: center;">
+          <img src="Images/cert-ocop.svg" alt="OCOP 4 Sao" style="width: 90px; height: 90px; margin: 0 auto 15px;">
+          <h3 style="font-size: 17px; font-weight: 700; color: var(--dark); margin-bottom: 8px;">Chứng Nhận OCOP 4 Sao</h3>
+          <p style="font-size: 13px; color: var(--text-muted); line-height: 1.6;">
+            Các sản phẩm Bò một nắng, Mắt cá ngừ và Nước mắm Gành Đỏ đạt chuẩn OCOP 4 sao tỉnh Phú Yên về chất lượng và bản sắc văn hóa.
+          </p>
+        </div>
+
+        <div style="background: #fff; padding: 25px; border-radius: 12px; border: 1px solid var(--border-color); text-align: center;">
+          <img src="Images/cert-origin.svg" alt="100% Chính Gốc" style="width: 90px; height: 90px; margin: 0 auto 15px;">
+          <h3 style="font-size: 17px; font-weight: 700; color: var(--dark); margin-bottom: 8px;">100% Chính Gốc Xứ Nẫu</h3>
+          <p style="font-size: 13px; color: var(--text-muted); line-height: 1.6;">
+            Hợp tác trực tiếp với Hợp tác xã ngư dân cảng cá Đông Tác Tuy Hòa, làng bánh Hòa Đa và các hộ nông dân chăn nuôi bò tơ Sơn Hòa.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Section 3: Quy trình đóng thùng xốp cấp đông 48h -->
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center;">
+      <div style="border-radius: 12px; overflow: hidden; border: 1px solid var(--border-color);">
+        <img src="Images/banner-free-shipping.svg" alt="Quy trình cấp đông" style="width: 100%;">
+      </div>
+
+      <div>
+        <span class="badge badge-primary" style="margin-bottom: 10px;">CÔNG NGHỆ BẢO QUẢN</span>
+        <h2 style="font-size: 26px; color: var(--primary-dark); font-weight: 800; margin-bottom: 15px;">
+          Quy Trình Cấp Đông & Đóng Thùng Xốp 48 Tiếng
+        </h2>
+        <ul style="font-size: 15px; line-height: 2; color: #334155;">
+          <li><strong>Bước 1:</strong> Hải sản và thịt tươi sơ chế ngay sau đánh bắt, hút chân không 2 lớp chống nhiễm khuẩn.</li>
+          <li><strong>Bước 2:</strong> Cấp đông sâu tại nhiệt độ -18°C đến -22°C trong kho lạnh Tuy Hòa.</li>
+          <li><strong>Bước 3:</strong> Đóng vào thùng xốp chuyên dụng, chèn 4 mặt đá gel khô giữ lạnh liên tục 48 tiếng.</li>
+          <li><strong>Bước 4:</strong> Vận chuyển hỏa tốc bằng đường bay và xe lạnh chuyên dụng cùng Viettel Post.</li>
+        </ul>
+      </div>
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="main-footer">
+    <div class="container">
+      <div class="footer-bottom" style="border: none; padding: 0; text-align: center;">
+        <p>© 2026 Đặc Sản Phú Yên - Hồn Quê Xứ Nẫu. Thiết kế phục vụ bài tập môn Thiết kế Web (MSSV: 6651071024).</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="Scripts/products-data.js"></script>
+  <script src="Scripts/main.js"></script>
+</body>
+</html>

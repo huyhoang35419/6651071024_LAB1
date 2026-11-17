@@ -1,0 +1,7 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 150 150" width="150" height="150">
+  <circle cx="75" cy="75" r="70" fill="#fffbeb" stroke="#f59e0b" stroke-width="4"/>
+  <circle cx="75" cy="75" r="58" fill="none" stroke="#f59e0b" stroke-width="1.5" stroke-dasharray="4,3"/>
+  <text x="75" y="65" font-family="'Segoe UI', sans-serif" font-weight="900" font-size="24" fill="#b45309" text-anchor="middle">OCOP</text>
+  <text x="75" y="85" font-family="'Segoe UI', sans-serif" font-weight="700" font-size="12" fill="#d97706" text-anchor="middle">PHÚ YÊN</text>
+  <text x="75" y="112" font-size="18" fill="#eab308" text-anchor="middle">★★★★</text>
+</svg>

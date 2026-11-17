@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chi Tiết Bài Viết | Câu Chuyện Xứ Nẫu Phú Yên</title>
+  <meta name="description" content="Khám phá chi tiết công thức nấu nướng và câu chuyện văn hóa ẩm thực đặc sản tỉnh Phú Yên.">
+  <link rel="icon" type="image/svg+xml" href="Images/logo.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Merriweather:ital,wght@0,700;0,900;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <link rel="stylesheet" href="Styles/style.css">
+  <link rel="stylesheet" href="Styles/responsive.css">
+</head>
+<body>
+
+  <!-- TOP BAR -->
+  <header class="top-bar">
+    <div class="container">
+      <div class="top-bar-left">
+        <span><i class="fa-solid fa-phone"></i> Hotline Tuy Hòa: <strong>0988.123.456</strong></span>
+        <span><i class="fa-solid fa-envelope"></i> dacsanxunau@phuyen.vn</span>
+        <span class="top-bar-highlight"><i class="fa-solid fa-snowflake"></i> Giao lạnh hỏa tốc toàn quốc - Đóng thùng xốp 48h</span>
+      </div>
+      <div class="top-bar-right">
+        <a href="order-tracking.html"><i class="fa-solid fa-route"></i> Tra cứu đơn hàng</a>
+        <span>|</span>
+        <a href="admin.html"><i class="fa-solid fa-user-shield"></i> Trang Quản Trị</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- MAIN HEADER -->
+  <div class="main-header">
+    <div class="container">
+      <div class="logo">
+        <a href="index.html">
+          <img src="Images/logo.svg" alt="Đặc Sản Phú Yên - Hồn Quê Xứ Nẫu">
+        </a>
+      </div>
+
+      <div class="header-search">
+        <form class="search-form" id="headerSearchForm">
+          <input type="text" class="search-input" id="searchInput" placeholder="Tìm kiếm bò một nắng, mắt cá ngừ, nước mắm..." autocomplete="off">
+          <button type="submit" class="search-btn"><i class="fa-solid fa-magnifying-glass"></i></button>
+        </form>
+        <div class="search-suggest" id="searchSuggestBox"></div>
+      </div>
+
+      <div class="header-actions">
+        <a href="shop.html" class="action-item"><i class="fa-regular fa-heart"></i><span class="badge-count wishlist-badge-count">0</span></a>
+        <a href="cart.html" class="cart-widget">
+          <div class="action-item"><i class="fa-solid fa-basket-shopping"></i><span class="badge-count cart-badge-count">0</span></div>
+          <div class="cart-info"><span>Giỏ hàng</span><span class="cart-total-price">0 đ</span></div>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- NAVIGATION BAR -->
+  <nav class="main-nav">
+    <div class="container">
+      <div class="dept-menu">
+        <button class="dept-btn" id="deptBtn">
+          <span><i class="fa-solid fa-bars"></i> TẤT CẢ DANH MỤC</span>
+          <i class="fa-solid fa-chevron-down"></i>
+        </button>
+        <ul class="dept-dropdown" id="deptDropdown">
+          <li><a href="shop.html?cat=hai-san"><i class="fa-solid fa-fish"></i> Hải sản đặc trưng Phú Yên</a></li>
+          <li><a href="shop.html?cat=thit-nui-rung"><i class="fa-solid fa-drumstick-bite"></i> Bò một nắng & Muối kiến vàng</a></li>
+          <li><a href="shop.html?cat=gia-vi"><i class="fa-solid fa-mortar-pestle"></i> Nước mắm Gành Đỏ & Bánh tráng</a></li>
+          <li><a href="shop.html?cat=banh-keo"><i class="fa-solid fa-cookie-bite"></i> Bánh phu thê & Quà vặt Xứ Nẫu</a></li>
+          <li><a href="shop.html?cat=qua-bieu"><i class="fa-solid fa-gift"></i> Combo Quà biếu Thượng Hạng</a></li>
+        </ul>
+      </div>
+
+      <ul class="nav-menu">
+        <li><a href="index.html">Trang chủ</a></li>
+        <li><a href="shop.html">Cửa hàng</a></li>
+        <li class="active"><a href="blog.html">Câu chuyện Xứ Nẫu</a></li>
+        <li><a href="about.html">Giới thiệu</a></li>
+        <li><a href="contact.html">Liên hệ</a></li>
+        <li><a href="order-tracking.html">Tra cứu đơn</a></li>
+        <li><a href="admin.html"><i class="fa-solid fa-gear"></i> Quản trị</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- BREADCRUMB -->
+  <div class="page-header" style="padding: 20px 0; margin-bottom: 30px;">
+    <div class="container">
+      <div class="breadcrumb">
+        <a href="index.html">Trang chủ</a>
+        <span>/</span>
+        <a href="blog.html">Câu chuyện Xứ Nẫu</a>
+        <span>/</span>
+        <span class="current" id="blogDetailBreadcrumb">Chi tiết bài viết</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- MAIN ARTICLE -->
+  <main class="container" style="margin-bottom: 70px;">
+    <div style="max-width: 860px; margin: 0 auto; background: #fff; padding: 40px; border-radius: 12px; border: 1px solid var(--border-color); box-shadow: var(--shadow-sm);">
+      <div class="blog-meta" style="margin-bottom: 15px;">
+        <span id="articleDate"><i class="fa-regular fa-calendar"></i> 15/11/2026</span>
+        <span id="articleAuthor"><i class="fa-regular fa-user"></i> Bếp Trưởng Xứ Nẫu</span>
+        <span id="articleCategory"><i class="fa-regular fa-folder"></i> Ẩm Thực Phú Yên</span>
+      </div>
+
+      <h1 id="articleTitle" style="font-family: var(--font-heading); font-size: 32px; color: var(--primary-dark); line-height: 1.35; margin-bottom: 25px;">
+        Bí quyết nướng Bò Một Nắng chấm Muối Kiến Vàng chuẩn vị Xứ Nẫu
+      </h1>
+
+      <div style="border-radius: 12px; overflow: hidden; margin-bottom: 30px;">
+        <img id="articleImage" src="Images/blog-bo-mot-nang.svg" alt="Hình ảnh bài viết" style="width: 100%;">
+      </div>
+
+      <!-- Article Rich Content -->
+      <div id="articleBody" style="font-size: 16px; line-height: 1.8; color: #334155;">
+        <!-- Injected via JavaScript -->
+      </div>
+
+      <!-- Call to Action Box inside Article -->
+      <div style="margin-top: 40px; background: #eff6ff; border: 1.5px solid #bfdbfe; border-radius: 10px; padding: 25px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 20px;">
+        <div>
+          <h3 style="font-size: 18px; color: var(--primary); font-weight: 800; margin-bottom: 5px;">Thưởng Thức Ngay Đặc Sản Chính Gốc</h3>
+          <p style="font-size: 14px; color: #475569; margin: 0;">Đóng thùng xốp cấp đông 48h, giao hỏa tốc đến tận bếp nhà bạn.</p>
+        </div>
+        <a href="shop.html" class="btn btn-secondary btn-lg">
+          <i class="fa-solid fa-basket-shopping"></i> ĐẶT HÀNG NGAY
+        </a>
+      </div>
+
+      <!-- Back to blog list -->
+      <div style="margin-top: 30px; border-top: 1px solid var(--border-color); padding-top: 20px; display: flex; justify-content: space-between;">
+        <a href="blog.html" class="btn btn-outline"><i class="fa-solid fa-arrow-left"></i> Quay lại danh sách bài viết</a>
+        <a href="shop.html" class="btn btn-primary">Khám phá cửa hàng đặc sản →</a>
+      </div>
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="main-footer">
+    <div class="container">
+      <div class="footer-bottom" style="border: none; padding: 0; text-align: center;">
+        <p>© 2026 Đặc Sản Phú Yên - Hồn Quê Xứ Nẫu. Thiết kế phục vụ bài tập môn Thiết kế Web (MSSV: 6651071024).</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="Scripts/products-data.js"></script>
+  <script src="Scripts/main.js"></script>
+  <script>
+    const ARTICLES = {
+      '1': {
+        title: 'Bí quyết nướng Bò Một Nắng chấm Muối Kiến Vàng chuẩn vị Xứ Nẫu',
+        date: '15/11/2026',
+        author: 'Bếp Trưởng Xứ Nẫu',
+        category: 'Bí quyết ẩm thực',
+        image: 'Images/blog-bo-mot-nang.svg',
+        content: `
+          <p>Nhắc đến ẩm thực miền đất "hoa vàng trên cỏ xanh" Phú Yên, người ta không thể nào không nhớ đến món <strong>Bò một nắng hai sương</strong> chấm cùng <strong>Muối kiến vàng Krông Pa</strong>. Đây là món ăn hội tụ tinh hoa của cái nắng chói chang miền duyên hải và đại ngàn Tây Hòa.</p>
+
+          <h3 style="font-size: 20px; color: #004e89; margin: 25px 0 10px;">1. Chọn thịt bò và quy trình phơi một nắng</h3>
+          <p>Thịt bò dùng làm đặc sản này phải là phần thịt bắp đùi hoặc thăn phi lê của những chú bò tơ được chăn thả tự nhiên trên các sườn đồi Tuy An. Thịt bò được thái thành những lát dày vừa phải chừng 1 - 1.5 cm, ướp cùng ớt xiêm rừng, sả băm, hành tím và ít rượu gia truyền để dậy mùi thơm.</p>
+          <p>Sau đó, thịt được trải đều trên các vỉ tre phơi dưới cái nắng gay gắt của miền Trung đúng tròn 1 ngày nắng to. Bề ngoài thịt se khô săn chắc nhưng bên trong vẫn giữ nguyên độ dẻo ngọt và màu đỏ hồng của thớ thịt tơ.</p>
+
+          <h3 style="font-size: 20px; color: #004e89; margin: 25px 0 10px;">2. Cách nướng bò một nắng ngon nhất</h3>
+          <p><strong>Nướng than hoa (Ngon chuẩn vị nhất):</strong> Đặt miếng bò lên vỉ than hồng vừa phải. Trở đều hai mặt khoảng 7 - 10 phút. Khi mỡ bò xèo xèo và các cạnh thịt hơi cháy xém màu cánh gián, dậy mùi thơm nức mũi là thịt đã đạt độ chín lý tưởng.</p>
+          <p><strong>Dùng nồi chiên không dầu:</strong> Nếu ở chung cư hoặc không tiện nhóm than, bạn có thể nướng bằng nồi chiên không dầu ở nhiệt độ 180°C trong vòng 8 phút, lật mặt nướng thêm 4 phút.</p>
+
+          <h3 style="font-size: 20px; color: #004e89; margin: 25px 0 10px;">3. Muối kiến vàng - Linh hồn của món ăn</h3>
+          <p>Đặc sản bò một nắng Phú Yên nếu thiếu đi chén muối kiến vàng thì xem như mất đi một nửa linh hồn. Tổ kiến vàng được người đồng bào bản địa lấy từ rừng già Krông Pa, rang chín trên chảo gang rồi giã nhuyễn cùng muối hột Tuy Hòa và ớt hiểm rừng.</p>
+          <p>Khi xé miếng thịt bò nóng hổi theo từng thớ dọc, chấm ngập vào chén muối kiến vàng cay xè, bạn sẽ cảm nhận được vị ngọt thanh đậm đà của thịt bò hòa quyện cùng vị chua dịu béo bùi độc nhất vô nhị của kiến rừng miền Trung!</p>
+        `
+      },
+      '2': {
+        title: 'Mắt cá ngừ đại dương - Đèn pha biển cả và cách nấu tiềm thố đất',
+        date: '12/11/2026',
+        author: 'Ngư Dân Tuy Hòa',
+        category: 'Hải sản Tuy Hòa',
+        image: 'Images/blog-mat-ca-ngu.svg',
+        content: `
+          <p>Phú Yên tự hào là cái nôi của nghề câu cá ngừ đại dương Việt Nam. Trong các phần của con cá ngừ, <strong>mắt cá ngừ đại dương</strong> (được ngư dân ví von là "đèn pha của biển cả") là món ăn bổ dưỡng và độc đáo bậc nhất.</p>
+
+          <h3 style="font-size: 20px; color: #004e89; margin: 25px 0 10px;">1. Giá trị dinh dưỡng vượt trội</h3>
+          <p>Mỗi mắt cá ngừ nặng từ 100g đến 200g, chứa hàm lượng cực kỳ dồi dào axit béo Omega-3, DHA tốt cho trí não và thị lực. Đặc biệt lớp mỡ cầu mắt béo ngậy thanh mát tự nhiên mà không gây cảm giác ngấy.</p>
+
+          <h3 style="font-size: 20px; color: #004e89; margin: 25px 0 10px;">2. Công thức tiềm thố đất thuốc bắc chuẩn vị</h3>
+          <p><strong>Sơ chế khử tanh:</strong> Mắt cá sau khi rã đông tự nhiên, rửa sạch qua rượu trắng và gừng giã nhuyễn rồi chần sơ qua nước sôi chừng 1 phút.</p>
+          <p><strong>Xếp vào thố đất nung:</strong> Cho mắt cá vào thố đất, ướp cùng kỷ tử, táo đỏ, sâm quy, gừng sợi, tiêu hạt Phú Yên và vài lát ớt hiểm đỏ. Thêm chút nước dùng hầm từ xương.</p>
+          <p><strong>Hấp cách thủy:</strong> Đậy kín nắp thố đất, hấp cách thủy trong khoảng 25 - 30 phút cho mắt cá ngấm đều vị thuốc bắc.</p>
+          <p>Món ăn khi bưng ra bàn phải còn sôi sùng sục trong thố đất, ăn kèm với rau tía tô xắt mỏng và bánh tráng nướng giòn rụm.</p>
+        `
+      },
+      '3': {
+        title: 'Làng nghề nước mắm Gành Đỏ hơn 100 năm tuổi sóng gió miền duyên hải',
+        date: '08/11/2026',
+        author: 'Ban Văn Hóa',
+        category: 'Làng nghề truyền thống',
+        image: 'Images/blog-ganh-do.svg',
+        content: `
+          <p>Nằm dọc theo vịnh Xuân Đài hiền hòa thuộc thị xã Sông Cầu, <strong>làng nghề nước mắm Gành Đỏ</strong> đã tồn tại và phát triển qua hơn một thế kỷ, là niềm tự hào của bao thế hệ ngư dân Phú Yên.</p>
+          <h3 style="font-size: 20px; color: #004e89; margin: 25px 0 10px;">Bí quyết ủ chượp từ cá cơm than và muối Tuy Hòa</h3>
+          <p>Nước mắm Gành Đỏ chỉ chọn duy nhất loại cá cơm than tươi rói vừa kéo lưới từ biển khơi. Cá được ủ cùng hạt muối biển Tuy Hòa trắng tinh khiết trong những thùng gỗ mít cổ thụ theo tỷ lệ vàng 3 cá 1 muối.</p>
+          <p>Quá trình ủ chượp kéo dài từ 12 đến 18 tháng ròng rã dưới cái nắng gió nhiệt đới, tạo nên những giọt nước mắm có màu hổ phách trong vắt, độ đạm tự nhiên lên tới 40 độ, hậu vị ngọt sâu lắng nơi đầu lưỡi.</p>
+        `
+      },
+      '4': {
+        title: 'Cẩm nang du lịch Phú Yên: Ăn gì, chơi ở đâu và mua gì làm quà biếu?',
+        date: '02/11/2026',
+        author: 'Ban Văn Hóa',
+        category: 'Cẩm nang du lịch',
+        image: 'Images/blog-du-lich.svg',
+        content: `
+          <p>Phú Yên - vùng đất duyên hải Nam Trung Bộ quyến rũ du khách bởi vẻ đẹp hoang sơ của Gành Đá Đĩa kỳ vĩ, ngọn hải đăng Đại Lãnh đón ánh bình minh đầu tiên của Tổ quốc và bãi Xép thơ mộng.</p>
+          <h3 style="font-size: 20px; color: #004e89; margin: 25px 0 10px;">Top 5 đặc sản nhất định phải mua về làm quà:</h3>
+          <ul style="line-height: 2; margin-left: 20px;">
+            <li><strong>Bò một nắng hai sương & Muối kiến vàng:</strong> Món quà biếu thượng hạng dành tặng gia đình và đồng nghiệp.</li>
+            <li><strong>Mắt cá ngừ đại dương:</strong> Đóng thùng xốp cấp đông xách tay lên máy bay dễ dàng.</li>
+            <li><strong>Nước mắm Gành Đỏ:</strong> Thơm lừng vị biển quê hương.</li>
+            <li><strong>Bánh tráng Hòa Đa:</strong> Dẻo dai tráng tay truyền thống.</li>
+            <li><strong>Bánh phu thê lá dừa:</strong> Quà vặt ngọt ngào thanh mát.</li>
+          </ul>
+        `
+      }
+    };
+
+    document.addEventListener('DOMContentLoaded', function() {
+      const urlParams = new URLSearchParams(window.location.search);
+      const articleId = urlParams.get('id') || '1';
+      const art = ARTICLES[articleId] || ARTICLES['1'];
+
+      document.title = `${art.title} - Đặc Sản Phú Yên`;
+      document.getElementById('blogDetailBreadcrumb').textContent = art.title;
+      document.getElementById('articleTitle').textContent = art.title;
+      document.getElementById('articleDate').innerHTML = `<i class="fa-regular fa-calendar"></i> ${art.date}`;
+      document.getElementById('articleAuthor').innerHTML = `<i class="fa-regular fa-user"></i> ${art.author}`;
+      document.getElementById('articleCategory').innerHTML = `<i class="fa-regular fa-folder"></i> ${art.category}`;
+      document.getElementById('articleImage').src = art.image;
+      document.getElementById('articleBody').innerHTML = art.content;
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Đặc Sản Phú Yên - Hồn Quê Xứ Nẫu | Website Thương Mại Điện Tử</title>
+  <meta name="description" content="Chuyên cung cấp đặc sản chính gốc Phú Yên: Mắt cá ngừ đại dương, Bò một nắng muối kiến vàng, Nước mắm Gành Đỏ. Giao hàng cấp đông 48h toàn quốc.">
+  <link rel="icon" type="image/svg+xml" href="Images/logo.svg">
+  <!-- Google Fonts & Font Awesome Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Merriweather:ital,wght@0,700;0,900;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <link rel="stylesheet" href="Styles/style.css">
+  <link rel="stylesheet" href="Styles/responsive.css">
+</head>
+<body>
+
+  <!-- 1. TOP BAR -->
+  <header class="top-bar">
+    <div class="container">
+      <div class="top-bar-left">
+        <span><i class="fa-solid fa-phone"></i> Hotline Tuy Hòa: <strong>0988.123.456</strong></span>
+        <span><i class="fa-solid fa-envelope"></i> dacsanxunau@phuyen.vn</span>
+        <span class="top-bar-highlight"><i class="fa-solid fa-snowflake"></i> Giao lạnh hỏa tốc toàn quốc - Đóng thùng xốp 48h</span>
+      </div>
+      <div class="top-bar-right">
+        <a href="order-tracking.html"><i class="fa-solid fa-route"></i> Tra cứu đơn hàng</a>
+        <span>|</span>
+        <a href="admin.html"><i class="fa-solid fa-user-shield"></i> Trang Quản Trị</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- 2. MAIN HEADER (ORGANI STYLE) -->
+  <div class="main-header">
+    <div class="container">
+      <div class="logo">
+        <a href="index.html">
+          <img src="Images/logo.svg" alt="Đặc Sản Phú Yên - Hồn Quê Xứ Nẫu">
+        </a>
+      </div>
+
+      <!-- Search Box with Category Selector & Auto-suggest -->
+      <div class="header-search">
+        <form class="search-form" id="headerSearchForm">
+          <select class="search-category" id="searchCategorySelect">
+            <option value="all">Tất cả danh mục</option>
+            <option value="hai-san">Hải sản đặc trưng</option>
+            <option value="thit-nui-rung">Thịt & Đặc sản núi rừng</option>
+            <option value="gia-vi">Gia vị & Nguyên liệu</option>
+            <option value="banh-keo">Bánh kẹo & Quà vặt</option>
+          </select>
+          <input type="text" class="search-input" id="searchInput" placeholder="Tìm kiếm bò một nắng, mắt cá ngừ, nước mắm..." autocomplete="off">
+          <button type="submit" class="search-btn">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </button>
+        </form>
+        <!-- Auto Suggest Dropdown -->
+        <div class="search-suggest" id="searchSuggestBox"></div>
+      </div>
+
+      <!-- Header Actions: Wishlist & Cart Widget -->
+      <div class="header-actions">
+        <a href="shop.html" class="action-item" title="Sản phẩm yêu thích">
+          <i class="fa-regular fa-heart"></i>
+          <span class="badge-count wishlist-badge-count">0</span>
+        </a>
+        <a href="cart.html" class="cart-widget">
+          <div class="action-item">
+            <i class="fa-solid fa-basket-shopping"></i>
+            <span class="badge-count cart-badge-count">0</span>
+          </div>
+          <div class="cart-info">
+            <span>Giỏ hàng</span>
+            <span class="cart-total-price">0 đ</span>
+          </div>
+        </a>
+        <button class="mobile-menu-btn" id="mobileMenuBtn">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- 3. NAVIGATION BAR (ORGANI STYLE) -->
+  <nav class="main-nav" id="mainNav">
+    <div class="container">
+      <!-- Departments Menu Toggle -->
+      <div class="dept-menu">
+        <button class="dept-btn" id="deptBtn">
+          <span><i class="fa-solid fa-bars"></i> TẤT CẢ DANH MỤC</span>
+          <i class="fa-solid fa-chevron-down"></i>
+        </button>
+        <ul class="dept-dropdown" id="deptDropdown">
+          <li><a href="shop.html?cat=hai-san"><i class="fa-solid fa-fish"></i> Hải sản đặc trưng Phú Yên</a></li>
+          <li><a href="shop.html?cat=thit-nui-rung"><i class="fa-solid fa-drumstick-bite"></i> Bò một nắng & Muối kiến vàng</a></li>
+          <li><a href="shop.html?cat=gia-vi"><i class="fa-solid fa-mortar-pestle"></i> Nước mắm Gành Đỏ & Bánh tráng</a></li>
+          <li><a href="shop.html?cat=banh-keo"><i class="fa-solid fa-cookie-bite"></i> Bánh phu thê & Quà vặt Xứ Nẫu</a></li>
+          <li><a href="shop.html?cat=qua-bieu"><i class="fa-solid fa-gift"></i> Combo Quà biếu Thượng Hạng</a></li>
+        </ul>
+      </div>
+
+      <!-- Main Navigation Menu -->
+      <ul class="nav-menu">
+        <li class="active"><a href="index.html">Trang chủ</a></li>
+        <li><a href="shop.html">Cửa hàng</a></li>
+        <li><a href="blog.html">Câu chuyện Xứ Nẫu</a></li>
+        <li><a href="about.html">Giới thiệu</a></li>
+        <li><a href="contact.html">Liên hệ</a></li>
+        <li><a href="order-tracking.html">Tra cứu đơn</a></li>
+        <li><a href="admin.html"><i class="fa-solid fa-gear"></i> Quản trị</a></li>
+      </ul>
+
+      <!-- Hotline Right -->
+      <div class="nav-hotline">
+        <i class="fa-solid fa-phone-volume"></i>
+        <div class="nav-hotline-text">
+          <span>Hỗ trợ đặt hàng 24/7</span>
+          <strong>0988.123.456</strong>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- 4. HERO SECTION -->
+  <section class="hero-section">
+    <div class="container">
+      <div class="hero-slider-wrap">
+        <div class="hero-slide">
+          <div class="hero-content">
+            <span class="hero-tag">★ 100% ĐẶC SẢN CHÍNH GỐC XỨ NẪU ★</span>
+            <h1>Hương Vị Nắng Gió <br><span>Đất Biển Phú Yên</span></h1>
+            <p>Tuyển chọn tinh hoa ẩm thực từ biển Vũng Rô đến đại ngàn Tây Hòa. Đóng thùng xốp cấp đông 48h chuẩn nhiệt, giao tận tay trên mọi miền Tổ quốc.</p>
+            <div class="hero-btns">
+              <a href="shop.html" class="btn btn-secondary btn-lg">
+                <i class="fa-solid fa-basket-shopping"></i> MUA SẮM NGAY
+              </a>
+              <a href="blog.html" class="btn btn-outline btn-lg" style="color: #fff; border-color: #fff;">
+                <i class="fa-solid fa-book-open"></i> CÂU CHUYỆN XỨ NẪU
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 4 Quick Benefits -->
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-icon"><i class="fa-solid fa-truck-fast"></i></div>
+          <div class="feature-info">
+            <h4>Giao Hàng Toàn Quốc</h4>
+            <p>Hỏa tốc 24h - 36h mọi tỉnh thành</p>
+          </div>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon"><i class="fa-solid fa-snowflake"></i></div>
+          <div class="feature-info">
+            <h4>Đóng Thùng Cấp Đông</h4>
+            <p>Giữ lạnh chuẩn âm 18°C suốt 48h</p>
+          </div>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon"><i class="fa-solid fa-award"></i></div>
+          <div class="feature-info">
+            <h4>Chuẩn OCOP & VSATTP</h4>
+            <p>100% chính gốc truyền thống</p>
+          </div>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon"><i class="fa-solid fa-rotate-left"></i></div>
+          <div class="feature-info">
+            <h4>Đổi Trả 1-1 Miễn Phí</h4>
+            <p>Cam kết hoàn tiền trong 24h</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. CATEGORIES SHOWCASE -->
+  <section class="categories-section">
+    <div class="container">
+      <div class="section-title">
+        <h2>Danh Mục Đặc Sản Nổi Bật</h2>
+        <p>Khám phá trọn vẹn phong vị ẩm thực truyền thống tỉnh Phú Yên</p>
+      </div>
+
+      <div class="category-grid">
+        <a href="shop.html?cat=hai-san" class="cat-item">
+          <div class="cat-thumb">
+            <img src="Images/sp-mat-ca-ngu.svg" alt="Hải sản đặc trưng">
+          </div>
+          <h3>Hải Sản Đặc Trưng</h3>
+          <span>Mắt cá ngừ, mực 1 nắng, cá mai...</span>
+        </a>
+
+        <a href="shop.html?cat=thit-nui-rung" class="cat-item">
+          <div class="cat-thumb">
+            <img src="Images/sp-bo-mot-nang.svg" alt="Thịt & Đặc sản núi rừng">
+          </div>
+          <h3>Thịt & Đặc Sản Núi Rừng</h3>
+          <span>Bò một nắng, muối kiến vàng, chả dông...</span>
+        </a>
+
+        <a href="shop.html?cat=gia-vi" class="cat-item">
+          <div class="cat-thumb">
+            <img src="Images/sp-nuoc-mam-ganh-do.svg" alt="Gia vị truyền thống">
+          </div>
+          <h3>Gia Vị Truyền Thống</h3>
+          <span>Nước mắm Gành Đỏ, bánh tráng Hòa Đa...</span>
+        </a>
+
+        <a href="shop.html?cat=banh-keo" class="cat-item">
+          <div class="cat-thumb">
+            <img src="Images/sp-banh-phu-the.svg" alt="Bánh kẹo & Quà vặt">
+          </div>
+          <h3>Bánh Kẹo & Quà Vặt</h3>
+          <span>Bánh phu thê, kẹo đậu phộng, hạt é...</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. FLASH SALE WITH COUNTDOWN TIMER -->
+  <section class="flash-sale-section">
+    <div class="container">
+      <div class="flash-sale-header">
+        <div class="flash-title-wrap">
+          <h2><i class="fa-solid fa-bolt-lightning"></i> FLASH SALE HÔM NAY</h2>
+          <span class="badge badge-danger">GIẢM ĐẾN 30%</span>
+        </div>
+        <div class="countdown-box">
+          <span class="cd-label">Kết thúc sau:</span>
+          <div class="time-unit" id="fsHours">00</div>
+          <span class="time-sep">:</span>
+          <div class="time-unit" id="fsMinutes">00</div>
+          <span class="time-sep">:</span>
+          <div class="time-unit" id="fsSeconds">00</div>
+        </div>
+      </div>
+
+      <!-- Flash Sale Products Grid -->
+      <div class="product-grid" id="flashSaleGrid">
+        <!-- Rendered by JavaScript -->
+      </div>
+    </div>
+  </section>
+
+  <!-- 7. FEATURED PRODUCTS WITH CATEGORY TABS -->
+  <section class="products-section">
+    <div class="container">
+      <div class="section-title">
+        <h2>Sản Phẩm Bán Chạy Nhất</h2>
+        <p>Những món ngon đượm tình quê được du khách và kiều bào yêu thích nhất</p>
+      </div>
+
+      <!-- Filter Tabs -->
+      <div class="filter-tabs" id="productFilterTabs">
+        <button class="filter-btn active" data-filter="all">Tất cả sản phẩm</button>
+        <button class="filter-btn" data-filter="hai-san">Hải sản Phú Yên</button>
+        <button class="filter-btn" data-filter="thit-nui-rung">Bò một nắng & Muối kiến</button>
+        <button class="filter-btn" data-filter="gia-vi">Gia vị & Bánh tráng</button>
+        <button class="filter-btn" data-filter="qua-bieu">Quà biếu cao cấp</button>
+      </div>
+
+      <!-- Products Grid -->
+      <div class="product-grid" id="featuredProductsGrid">
+        <!-- Rendered dynamically -->
+      </div>
+
+      <div style="text-align: center; margin-top: 35px;">
+        <a href="shop.html" class="btn btn-outline btn-lg">
+          Xem Tất Cả 18+ Đặc Sản Phú Yên <i class="fa-solid fa-arrow-right"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 8. PROMOTION BANNERS (ORGANI STYLE) -->
+  <section class="promo-banners-section">
+    <div class="container">
+      <div class="promo-grid">
+        <a href="shop.html?cat=thit-nui-rung" class="promo-banner-card">
+          <img src="Images/banner-bo-mot-nang.svg" alt="Bò một nắng muối kiến vàng">
+        </a>
+        <a href="shop.html?cat=hai-san" class="promo-banner-card">
+          <img src="Images/banner-ca-ngu.svg" alt="Mắt cá ngừ đại dương">
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 9. SOUND OF THE SEA & VIDEO SHOWCASE (PHÚ YÊN MULTIMEDIA) -->
+  <section class="media-experience-section">
+    <div class="container">
+      <div class="section-title">
+        <h2>Lắng Nghe Âm Vang Xứ Nẫu</h2>
+        <p>Cảm nhận tiếng sóng vỗ gềnh đá Tuy Hòa và khám phá thước phim truyền thống Phú Yên</p>
+      </div>
+
+      <div class="media-grid">
+        <!-- Audio Player: Tiếng sóng biển Phú Yên -->
+        <div class="media-audio-card">
+          <div class="audio-header">
+            <div class="audio-icon"><i class="fa-solid fa-water"></i></div>
+            <div>
+              <h3 style="font-size: 18px; color: var(--dark); font-weight: 700;">Âm Thanh Sóng Biển Tuy Hòa</h3>
+              <p style="font-size: 13px; color: var(--text-muted);">Giai điệu thanh bình bên bờ biển Phú Yên</p>
+            </div>
+          </div>
+          <p style="font-size: 13px; color: #475569; line-height: 1.6; margin-bottom: 12px;">
+            Nhấp nút phát bên dưới để vừa mua sắm đặc sản vừa thư giãn cùng âm hưởng rì rào của biển xanh Vũng Rô và Gành Đá Đĩa.
+          </p>
+          <div class="custom-audio-player">
+            <audio controls id="seaAudioPlayer">
+              <source src="Sounds/ocean-waves.mp3" type="audio/mpeg">
+              Trình duyệt của bạn không hỗ trợ phát âm thanh.
+            </audio>
+          </div>
+        </div>
+
+        <!-- Video Clip: Clip Giới Thiệu Đặc Sản Phú Yên -->
+        <div class="media-video-card">
+          <div class="video-container">
+            <video controls poster="Images/hero-banner.svg" id="specialtyVideoPlayer">
+              <source src="Videos/phu-yen-specialty.mp4" type="video/mp4">
+              Trình duyệt không hỗ trợ xem video.
+            </video>
+            <div class="video-overlay-info">
+              <h3>Hành Trình Đặc Sản Xứ Nẫu</h3>
+              <p>Quy trình đánh bắt cá ngừ đại dương & ủ nước mắm Gành Đỏ truyền thống</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 10. SHIPPING BANNER -->
+  <section class="shipping-banner-section">
+    <div class="container">
+      <a href="cart.html">
+        <img src="Images/banner-free-shipping.svg" alt="Miễn phí đóng thùng xốp cấp đông 48h">
+      </a>
+    </div>
+  </section>
+
+  <!-- 11. TRUST BADGES / QUALITY COMMITMENTS -->
+  <section class="trust-badges-section">
+    <div class="container">
+      <div class="trust-grid">
+        <div class="trust-item">
+          <div class="trust-icon-wrap">
+            <img src="Images/cert-origin.svg" alt="100% Chính Gốc Phú Yên">
+          </div>
+          <h4>100% Chính Gốc</h4>
+          <p>Nguồn gốc rõ ràng tại làng nghề truyền thống Tuy An, Sơn Hòa, Sông Cầu</p>
+        </div>
+
+        <div class="trust-item">
+          <div class="trust-icon-wrap">
+            <img src="Images/cert-vsattp.svg" alt="Chứng nhận VSATTP">
+          </div>
+          <h4>Chứng Nhận VSATTP</h4>
+          <p>Đạt chuẩn an toàn vệ sinh thực phẩm, không phẩm màu và chất bảo quản độc hại</p>
+        </div>
+
+        <div class="trust-item">
+          <div class="trust-icon-wrap">
+            <img src="Images/cert-ocop.svg" alt="Đạt Chuẩn OCOP">
+          </div>
+          <h4>Sản Phẩm OCOP Phú Yên</h4>
+          <p>Sản phẩm tiêu biểu OCOP 4 sao tỉnh Phú Yên tôn vinh nông hải sản địa phương</p>
+        </div>
+
+        <div class="trust-item">
+          <div class="trust-icon-wrap">
+            <div style="width: 90px; height: 90px; border-radius: 50%; background: #e0f2fe; color: #004e89; display: flex; align-items: center; justify-content: center; font-size: 38px; margin: 0 auto 15px;">
+              <i class="fa-solid fa-box-open"></i>
+            </div>
+          </div>
+          <h4>Cấp Đông 48 Tiếng</h4>
+          <p>Đóng thùng xốp kèm đá gel chuyên dụng, đảm bảo thực phẩm tươi ngon nguyên vẹn</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 12. CÂU CHUYỆN XỨ NẪU (LATEST BLOG POSTS) -->
+  <section class="blog-section">
+    <div class="container">
+      <div class="section-title">
+        <h2>Câu Chuyện Xứ Nẫu</h2>
+        <p>Bí quyết ẩm thực, nguồn gốc đặc sản và cẩm nang du lịch Phú Yên</p>
+      </div>
+
+      <div class="blog-grid">
+        <!-- Post 1 -->
+        <article class="blog-card">
+          <div class="blog-thumb">
+            <a href="blog-detail.html?id=1">
+              <img src="Images/blog-bo-mot-nang.svg" alt="Bí quyết nướng bò một nắng">
+            </a>
+          </div>
+          <div class="blog-body">
+            <div class="blog-meta">
+              <span><i class="fa-regular fa-calendar"></i> 15/11/2026</span>
+              <span><i class="fa-regular fa-user"></i> Bếp Xứ Nẫu</span>
+            </div>
+            <h3 class="blog-title">
+              <a href="blog-detail.html?id=1">Bí quyết nướng Bò Một Nắng chấm Muối Kiến Vàng chuẩn vị Xứ Nẫu</a>
+            </h3>
+            <p class="blog-excerpt">
+              Hướng dẫn canh nhiệt than hoa, mẹo xé thịt thăn bò tơ và cách pha muối kiến rừng Krông Pa giữ trọn vị cay chua độc bản...
+            </p>
+            <a href="blog-detail.html?id=1" class="blog-link">Đọc tiếp →</a>
+          </div>
+        </article>
+
+        <!-- Post 2 -->
+        <article class="blog-card">
+          <div class="blog-thumb">
+            <a href="blog-detail.html?id=2">
+              <img src="Images/blog-mat-ca-ngu.svg" alt="Mắt cá ngừ đại dương">
+            </a>
+          </div>
+          <div class="blog-body">
+            <div class="blog-meta">
+              <span><i class="fa-regular fa-calendar"></i> 12/11/2026</span>
+              <span><i class="fa-regular fa-user"></i> Ngư Dân Tuy Hòa</span>
+            </div>
+            <h3 class="blog-title">
+              <a href="blog-detail.html?id=2">Mắt cá ngừ đại dương - Đèn pha biển cả và cách nấu tiềm thố đất</a>
+            </h3>
+            <p class="blog-excerpt">
+              Tìm hiểu vì sao mắt cá ngừ Phú Yên lại trở thành món ăn danh bất hư truyền của vùng biển duyên hải miền Trung...
+            </p>
+            <a href="blog-detail.html?id=2" class="blog-link">Đọc tiếp →</a>
+          </div>
+        </article>
+
+        <!-- Post 3 -->
+        <article class="blog-card">
+          <div class="blog-thumb">
+            <a href="blog-detail.html?id=3">
+              <img src="Images/blog-ganh-do.svg" alt="Làng nghề nước mắm Gành Đỏ">
+            </a>
+          </div>
+          <div class="blog-body">
+            <div class="blog-meta">
+              <span><i class="fa-regular fa-calendar"></i> 08/11/2026</span>
+              <span><i class="fa-regular fa-user"></i> Ban Văn Hóa</span>
+            </div>
+            <h3 class="blog-title">
+              <a href="blog-detail.html?id=3">Làng nghề nước mắm Gành Đỏ hơn 100 năm tuổi sóng gió miền duyên hải</a>
+            </h3>
+            <p class="blog-excerpt">
+              Khám phá quy trình ủ chượp cá cơm than tươi cùng muối biển Tuy Hòa trong thùng gỗ theo công thức 3 cá 1 muối...
+            </p>
+            <a href="blog-detail.html?id=3" class="blog-link">Đọc tiếp →</a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 13. NEWSLETTER SECTION -->
+  <section class="newsletter-section">
+    <div class="container">
+      <div class="newsletter-box">
+        <div class="newsletter-text">
+          <h3>Đăng Ký Nhận Mã Giảm Giá 50.000đ</h3>
+          <p>Nhận ngay cẩm nang món ngon Xứ Nẫu và thông báo khuyến mãi mới nhất</p>
+        </div>
+        <form class="newsletter-form" onsubmit="event.preventDefault(); showToast('Thành công', 'Cảm ơn bạn đã đăng ký nhận tin!', 'success'); this.reset();">
+          <input type="email" placeholder="Nhập địa chỉ email của bạn..." required>
+          <button type="submit">ĐĂNG KÝ</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- 14. FOOTER -->
+  <footer class="main-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <!-- Col 1: Brand Info -->
+        <div class="footer-col">
+          <img src="Images/logo.svg" alt="Đặc Sản Phú Yên" style="max-height: 50px; margin-bottom: 15px; filter: brightness(0) invert(1);">
+          <p>
+            Hệ thống phân phối và bán lẻ đặc sản chính gốc tỉnh Phú Yên. Mang hương vị nắng gió quê hương Xứ Nẫu đến với mọi gia đình Việt.
+          </p>
+          <ul class="footer-contact">
+            <li><i class="fa-solid fa-location-dot"></i> Showroom chính: 189 Hùng Vương, Phường 5, TP. Tuy Hòa, Tỉnh Phú Yên</li>
+            <li><i class="fa-solid fa-location-dot"></i> Trạm trung chuyển: 45 Nguyễn Gia Trí, Phường 25, Quận Bình Thạnh, TP.HCM</li>
+            <li><i class="fa-solid fa-phone"></i> Hotline: 0988.123.456 - 0257.3888.999</li>
+            <li><i class="fa-solid fa-envelope"></i> dacsanxunau@phuyen.vn</li>
+          </ul>
+        </div>
+
+        <!-- Col 2: Về Chúng Tôi -->
+        <div class="footer-col">
+          <h4>VỀ CHÚNG TÔI</h4>
+          <ul class="footer-links">
+            <li><a href="about.html">Giới thiệu cửa hàng</a></li>
+            <li><a href="about.html">Chứng nhận OCOP & VSATTP</a></li>
+            <li><a href="blog.html">Câu chuyện ẩm thực Xứ Nẫu</a></li>
+            <li><a href="contact.html">Hệ thống phân phối</a></li>
+            <li><a href="contact.html">Tuyển dụng & Hợp tác</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Hỗ Trợ Khách Hàng -->
+        <div class="footer-col">
+          <h4>CHÍNH SÁCH & HỖ TRỢ</h4>
+          <ul class="footer-links">
+            <li><a href="cart.html">Chính sách giao hàng & Cấp đông</a></li>
+            <li><a href="order-tracking.html">Quy trình đổi trả & Hoàn tiền</a></li>
+            <li><a href="order-tracking.html">Tra cứu mã vận đơn</a></li>
+            <li><a href="checkout.html">Hướng dẫn thanh toán VietQR</a></li>
+            <li><a href="about.html">Bảo mật thông tin khách hàng</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Liên Kết & Thanh Toán -->
+        <div class="footer-col">
+          <h4>KẾT NỐI VỚI CHÚNG TÔI</h4>
+          <p>Theo dõi các kênh mạng xã hội để cập nhật những món ngon Phú Yên mới nhất:</p>
+          <div class="social-links">
+            <a href="#" class="social-btn"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#" class="social-btn"><i class="fa-brands fa-tiktok"></i></a>
+            <a href="#" class="social-btn"><i class="fa-brands fa-youtube"></i></a>
+            <a href="#" class="social-btn"><i class="fa-solid fa-comment-dots"></i></a>
+          </div>
+          <div style="margin-top: 20px;">
+            <p style="font-size: 13px; margin-bottom: 8px; color: #fff;">Phương thức thanh toán:</p>
+            <div class="payment-methods">
+              <span class="payment-badge">COD</span>
+              <span class="payment-badge">VIETQR</span>
+              <span class="payment-badge">MOMO</span>
+              <span class="payment-badge">VNPAY</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2026 Đặc Sản Phú Yên - Hồn Quê Xứ Nẫu. Thiết kế phục vụ bài tập môn Thiết kế Web (MSSV: 6651071024).</p>
+        <p>Bản quyền thuộc về Nhóm sinh viên thực hành LAB1.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="Scripts/products-data.js"></script>
+  <script src="Scripts/main.js"></script>
+  <script>
+    // Khởi tạo hiển thị sản phẩm trên trang chủ
+    document.addEventListener('DOMContentLoaded', function() {
+      // 1. Render Flash Sale Products
+      const flashGrid = document.getElementById('flashSaleGrid');
+      if (flashGrid && typeof PRODUCTS !== 'undefined') {
+        const flashItems = PRODUCTS.filter(p => p.isFlashSale).slice(0, 4);
+        flashGrid.innerHTML = flashItems.map(p => renderProductCard(p)).join('');
+      }
+
+      // 2. Render Featured Products & Filter Tabs
+      const featGrid = document.getElementById('featuredProductsGrid');
+      const tabs = document.querySelectorAll('#productFilterTabs .filter-btn');
+
+      function filterFeatured(cat) {
+        if (!featGrid || typeof PRODUCTS === 'undefined') return;
+        const filtered = (cat === 'all') ? PRODUCTS.slice(0, 8) : PRODUCTS.filter(p => p.category === cat);
+        featGrid.innerHTML = filtered.map(p => renderProductCard(p)).join('');
+      }
+
+      filterFeatured('all');
+
+      tabs.forEach(btn => {
+        btn.addEventListener('click', function() {
+          tabs.forEach(b => b.classList.remove('active'));
+          this.classList.add('active');
+          const filter = this.getAttribute('data-filter');
+          filterFeatured(filter);
+        });
+      });
+    });
+  </script>
+</body>
+</html>

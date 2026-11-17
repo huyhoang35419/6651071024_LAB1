@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Theo Dõi Đơn Hàng & Lịch Sử Mua Hàng | Đặc Sản Phú Yên</title>
+  <meta name="description" content="Tra cứu tiến độ vận chuyển đơn hàng, theo dõi thùng xốp cấp đông Viettel Post và xem điểm tích lũy thành viên.">
+  <link rel="icon" type="image/svg+xml" href="Images/logo.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Merriweather:ital,wght@0,700;0,900;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <link rel="stylesheet" href="Styles/style.css">
+  <link rel="stylesheet" href="Styles/responsive.css">
+</head>
+<body>
+
+  <!-- TOP BAR -->
+  <header class="top-bar">
+    <div class="container">
+      <div class="top-bar-left">
+        <span><i class="fa-solid fa-phone"></i> Hotline Tuy Hòa: <strong>0988.123.456</strong></span>
+        <span><i class="fa-solid fa-envelope"></i> dacsanxunau@phuyen.vn</span>
+        <span class="top-bar-highlight"><i class="fa-solid fa-snowflake"></i> Giao lạnh hỏa tốc toàn quốc - Đóng thùng xốp 48h</span>
+      </div>
+      <div class="top-bar-right">
+        <a href="order-tracking.html" style="color: var(--primary); font-weight: 700;"><i class="fa-solid fa-route"></i> Tra cứu đơn hàng</a>
+        <span>|</span>
+        <a href="admin.html"><i class="fa-solid fa-user-shield"></i> Trang Quản Trị</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- MAIN HEADER -->
+  <div class="main-header">
+    <div class="container">
+      <div class="logo">
+        <a href="index.html">
+          <img src="Images/logo.svg" alt="Đặc Sản Phú Yên - Hồn Quê Xứ Nẫu">
+        </a>
+      </div>
+
+      <div class="header-search">
+        <form class="search-form" id="headerSearchForm">
+          <select class="search-category" id="searchCategorySelect">
+            <option value="all">Tất cả danh mục</option>
+            <option value="hai-san">Hải sản đặc trưng</option>
+            <option value="thit-nui-rung">Thịt & Núi rừng</option>
+            <option value="gia-vi">Gia vị & Nguyên liệu</option>
+            <option value="banh-keo">Bánh kẹo & Quà vặt</option>
+          </select>
+          <input type="text" class="search-input" id="searchInput" placeholder="Tìm kiếm bò một nắng, mắt cá ngừ, nước mắm..." autocomplete="off">
+          <button type="submit" class="search-btn">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </button>
+        </form>
+        <div class="search-suggest" id="searchSuggestBox"></div>
+      </div>
+
+      <div class="header-actions">
+        <a href="shop.html" class="action-item" title="Yêu thích">
+          <i class="fa-regular fa-heart"></i>
+          <span class="badge-count wishlist-badge-count">0</span>
+        </a>
+        <a href="cart.html" class="cart-widget">
+          <div class="action-item">
+            <i class="fa-solid fa-basket-shopping"></i>
+            <span class="badge-count cart-badge-count">0</span>
+          </div>
+          <div class="cart-info">
+            <span>Giỏ hàng</span>
+            <span class="cart-total-price">0 đ</span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- NAVIGATION BAR -->
+  <nav class="main-nav">
+    <div class="container">
+      <div class="dept-menu">
+        <button class="dept-btn" id="deptBtn">
+          <span><i class="fa-solid fa-bars"></i> TẤT CẢ DANH MỤC</span>
+          <i class="fa-solid fa-chevron-down"></i>
+        </button>
+        <ul class="dept-dropdown" id="deptDropdown">
+          <li><a href="shop.html?cat=hai-san"><i class="fa-solid fa-fish"></i> Hải sản đặc trưng Phú Yên</a></li>
+          <li><a href="shop.html?cat=thit-nui-rung"><i class="fa-solid fa-drumstick-bite"></i> Bò một nắng & Muối kiến vàng</a></li>
+          <li><a href="shop.html?cat=gia-vi"><i class="fa-solid fa-mortar-pestle"></i> Nước mắm Gành Đỏ & Bánh tráng</a></li>
+          <li><a href="shop.html?cat=banh-keo"><i class="fa-solid fa-cookie-bite"></i> Bánh phu thê & Quà vặt Xứ Nẫu</a></li>
+          <li><a href="shop.html?cat=qua-bieu"><i class="fa-solid fa-gift"></i> Combo Quà biếu Thượng Hạng</a></li>
+        </ul>
+      </div>
+
+      <ul class="nav-menu">
+        <li><a href="index.html">Trang chủ</a></li>
+        <li><a href="shop.html">Cửa hàng</a></li>
+        <li><a href="blog.html">Câu chuyện Xứ Nẫu</a></li>
+        <li><a href="about.html">Giới thiệu</a></li>
+        <li><a href="contact.html">Liên hệ</a></li>
+        <li class="active"><a href="order-tracking.html">Tra cứu đơn</a></li>
+        <li><a href="admin.html"><i class="fa-solid fa-gear"></i> Quản trị</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- BREADCRUMB -->
+  <div class="page-header" style="padding: 20px 0; margin-bottom: 30px;">
+    <div class="container">
+      <div class="breadcrumb">
+        <a href="index.html">Trang chủ</a>
+        <span>/</span>
+        <span class="current">Theo dõi đơn hàng & Tài khoản thành viên</span>
+      </div>
+      <h1 style="font-size: 26px; margin-top: 5px;">Tra Cứu Tiến Độ Đơn Hàng</h1>
+    </div>
+  </div>
+
+  <!-- MAIN TRACKING CONTENT -->
+  <main class="container" style="margin-bottom: 60px;">
+    <!-- Loyalty Points Banner -->
+    <div style="background: linear-gradient(135deg, #004e89 0%, #0284c7 100%); color: #fff; padding: 25px 30px; border-radius: 12px; margin-bottom: 30px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 20px;">
+      <div>
+        <span class="badge" style="background: #fef08a; color: #854d0e; margin-bottom: 8px;">★ THÀNH VIÊN THÂN THIẾT XỨ NẪU ★</span>
+        <h2 style="font-size: 22px; font-weight: 800;">Điểm Tích Lũy Của Bạn: <span id="userLoyaltyPoints">120</span> Điểm</h2>
+        <p style="font-size: 13px; color: #e0f2fe;">Đổi ngay 100 điểm = 50.000 đ giảm trực tiếp vào đơn hàng tiếp theo!</p>
+      </div>
+      <div>
+        <a href="shop.html" class="btn btn-secondary">
+          <i class="fa-solid fa-basket-shopping"></i> Mua sắm tích thêm điểm
+        </a>
+      </div>
+    </div>
+
+    <!-- Search Order Input Box -->
+    <div class="checkout-box" style="margin-bottom: 30px;">
+      <h2><i class="fa-solid fa-magnifying-glass"></i> Tra Cứu Bằng Mã Đơn Hàng</h2>
+      <p style="font-size: 14px; color: var(--text-muted); margin-bottom: 15px;">
+        Nhập mã đơn hàng bạn đã nhận khi đặt (ví dụ: <strong>PY-8869</strong> hoặc mã đơn của bạn):
+      </p>
+      
+      <div style="display: flex; gap: 10px; max-width: 500px;">
+        <input type="text" class="form-control" id="trackingOrderIdInput" placeholder="Nhập mã PY-..." style="text-transform: uppercase;">
+        <button class="btn btn-primary" onclick="searchOrderByInput()">Tra Cứu</button>
+      </div>
+    </div>
+
+    <!-- Tracking Result Box -->
+    <div class="checkout-box" id="trackingResultBox" style="display: block;">
+      <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--border-color); padding-bottom: 15px; margin-bottom: 25px; flex-wrap: wrap; gap: 10px;">
+        <div>
+          <h2 style="margin: 0; font-size: 20px; color: var(--primary);" id="trkOrderIdTitle">Đơn Hàng: PY-8869</h2>
+          <span style="font-size: 13px; color: var(--text-muted);" id="trkOrderDate">Ngày đặt: 17/11/2026</span>
+        </div>
+        <div>
+          <span class="badge badge-primary" style="font-size: 13px; padding: 6px 14px;" id="trkOrderStatusBadge">
+            <i class="fa-solid fa-truck-fast"></i> Đang đóng gói thùng xốp
+          </span>
+        </div>
+      </div>
+
+      <!-- 5-Step Stepper Timeline -->
+      <div class="tracking-stepper">
+        <div class="step-item completed">
+          <div class="step-circle"><i class="fa-solid fa-check"></i></div>
+          <div class="step-title">Đặt hàng thành công</div>
+          <div class="step-time">Đã xác nhận online</div>
+        </div>
+
+        <div class="step-item completed">
+          <div class="step-circle"><i class="fa-solid fa-check"></i></div>
+          <div class="step-title">Tuy Hòa duyệt đơn</div>
+          <div class="step-time">Đã gọi xác nhận</div>
+        </div>
+
+        <div class="step-item active">
+          <div class="step-circle"><i class="fa-solid fa-snowflake"></i></div>
+          <div class="step-title">Đóng thùng cấp đông</div>
+          <div class="step-time">Ướp đá gel âm 18°C</div>
+        </div>
+
+        <div class="step-item">
+          <div class="step-circle"><i class="fa-solid fa-truck"></i></div>
+          <div class="step-title">Vận chuyển Viettel Post</div>
+          <div class="step-time">Hỏa tốc đường bay</div>
+        </div>
+
+        <div class="step-item">
+          <div class="step-circle"><i class="fa-solid fa-box-open"></i></div>
+          <div class="step-title">Giao hàng thành công</div>
+          <div class="step-time">Khách kiểm tra hàng</div>
+        </div>
+      </div>
+
+      <!-- Customer & Shipping Summary Grid -->
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 35px; background: #f8fafc; padding: 20px; border-radius: 8px; border: 1px solid var(--border-color);">
+        <div>
+          <h4 style="font-size: 15px; color: var(--dark); margin-bottom: 10px;"><i class="fa-solid fa-location-dot" style="color: var(--secondary);"></i> Thông Tin Nhận Hàng</h4>
+          <p style="font-size: 14px; margin-bottom: 5px;">Người nhận: <strong id="trkCustomerName">Nguyễn Văn An</strong></p>
+          <p style="font-size: 14px; margin-bottom: 5px;">Số điện thoại: <strong id="trkCustomerPhone">0912 345 678</strong></p>
+          <p style="font-size: 14px; margin-bottom: 5px;">Địa chỉ: <span id="trkCustomerAddress">123 Đường Nguyễn Huệ, Phường 2, TP. Tuy Hòa</span></p>
+        </div>
+
+        <div>
+          <h4 style="font-size: 15px; color: var(--dark); margin-bottom: 10px;"><i class="fa-solid fa-credit-card" style="color: var(--primary);"></i> Thanh Toán & Đóng Gói</h4>
+          <p style="font-size: 14px; margin-bottom: 5px;">Phương thức: <strong id="trkPaymentMethod">Thanh toán khi nhận hàng (COD)</strong></p>
+          <p style="font-size: 14px; margin-bottom: 5px;">Đóng gói: <strong style="color: #0284c7;">Thùng xốp đá gel cấp đông 48h</strong></p>
+          <p style="font-size: 14px; margin-bottom: 5px;">Tổng thanh toán: <strong style="color: var(--primary); font-size: 16px;" id="trkOrderTotal">580.000 đ</strong></p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Recent Orders History Table -->
+    <div class="checkout-box" style="margin-top: 40px;">
+      <h2><i class="fa-solid fa-clock-rotate-left"></i> Lịch Sử Đơn Hàng Đã Đặt</h2>
+      <div class="cart-table-wrap">
+        <table class="cart-table">
+          <thead>
+            <tr>
+              <th>Mã Đơn</th>
+              <th>Ngày Đặt</th>
+              <th>Người Nhận</th>
+              <th>Tổng Tiền</th>
+              <th>Trạng Thái</th>
+              <th>Hành Động</th>
+            </tr>
+          </thead>
+          <tbody id="ordersHistoryTbody">
+            <!-- Rendered by JS -->
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="main-footer">
+    <div class="container">
+      <div class="footer-bottom" style="border: none; padding: 0; text-align: center;">
+        <p>© 2026 Đặc Sản Phú Yên - Hồn Quê Xứ Nẫu. Thiết kế phục vụ bài tập môn Thiết kế Web (MSSV: 6651071024).</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="Scripts/products-data.js"></script>
+  <script src="Scripts/main.js"></script>
+  <script>
+    function loadOrderTracking() {
+      // 1. Tích điểm
+      const points = localStorage.getItem('phuyen_points') || '120';
+      const pointsEl = document.getElementById('userLoyaltyPoints');
+      if (pointsEl) pointsEl.textContent = points;
+
+      // 2. Lấy orders
+      let orders = [];
+      try {
+        const raw = localStorage.getItem('phuyen_orders');
+        orders = raw ? JSON.parse(raw) : [];
+      } catch (e) {}
+
+      // Mẫu demo nếu chưa có đơn nào
+      if (orders.length === 0) {
+        orders = [
+          {
+            orderId: 'PY-8869',
+            date: '17/11/2026, 10:15',
+            customer: { fullname: 'Nguyễn Văn An', phone: '0912 345 678', address: '123 Đường Nguyễn Huệ, Phường 2, Tuy Hòa' },
+            summary: { grandTotal: 580000 },
+            paymentMethod: 'cod',
+            status: 'Đang đóng gói thùng xốp'
+          }
+        ];
+      }
+
+      // Check URL param ?orderId=...
+      const urlParams = new URLSearchParams(window.location.search);
+      const reqId = urlParams.get('orderId');
+
+      let current = orders[0];
+      if (reqId) {
+        const found = orders.find(o => o.orderId === reqId);
+        if (found) current = found;
+      }
+
+      // Render Current Order Info
+      if (current) {
+        document.getElementById('trkOrderIdTitle').textContent = `Đơn Hàng: ${current.orderId}`;
+        document.getElementById('trkOrderDate').textContent = `Ngày đặt: ${current.date}`;
+        document.getElementById('trkOrderStatusBadge').textContent = current.status;
+        document.getElementById('trkCustomerName').textContent = current.customer.fullname;
+        document.getElementById('trkCustomerPhone').textContent = current.customer.phone;
+        document.getElementById('trkCustomerAddress').textContent = current.customer.address;
+        document.getElementById('trkOrderTotal').textContent = formatPrice(current.summary.grandTotal);
+        document.getElementById('trkPaymentMethod').textContent = current.paymentMethod === 'vietqr' ? 'Chuyển khoản VietQR' : (current.paymentMethod === 'momo' ? 'Ví điện tử MoMo' : 'Thanh toán COD');
+      }
+
+      // Render Orders History Table
+      const tbody = document.getElementById('ordersHistoryTbody');
+      if (tbody) {
+        tbody.innerHTML = orders.map(ord => `
+          <tr>
+            <td><strong>${ord.orderId}</strong></td>
+            <td>${ord.date}</td>
+            <td>${ord.customer ? ord.customer.fullname : 'Khách vãng lai'}</td>
+            <td><strong style="color: var(--primary);">${formatPrice(ord.summary ? ord.summary.grandTotal : 0)}</strong></td>
+            <td><span class="badge badge-primary">${ord.status}</span></td>
+            <td>
+              <button class="btn btn-sm btn-outline" onclick="viewOrder('${ord.orderId}')">
+                Chi tiết
+              </button>
+            </td>
+          </tr>
+        `).join('');
+      }
+    }
+
+    function searchOrderByInput() {
+      const q = document.getElementById('trackingOrderIdInput').value.trim().toUpperCase();
+      if (!q) {
+        alert('Vui lòng nhập mã đơn hàng!');
+        return;
+      }
+      viewOrder(q);
+    }
+
+    function viewOrder(orderId) {
+      window.location.href = `order-tracking.html?orderId=${encodeURIComponent(orderId)}`;
+    }
+
+    document.addEventListener('DOMContentLoaded', loadOrderTracking);
+  </script>
+</body>
+</html>

@@ -1,0 +1,17 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 160" width="1200" height="160">
+  <defs>
+    <linearGradient id="shipGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f77f00"/>
+      <stop offset="100%" stop-color="#d62828"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="160" rx="12" fill="url(#shipGrad)"/>
+  <g transform="translate(60, 45)">
+    <text x="0" y="32" font-family="'Segoe UI', sans-serif" font-weight="900" font-size="28" fill="#ffffff">ĐÓNG THÙNG XỐP CẤP ĐÔNG 48H CHUYÊN NGHIỆP</text>
+    <text x="0" y="65" font-family="'Segoe UI', sans-serif" font-weight="600" font-size="16" fill="#fef08a">Miễn phí vận chuyển cho đơn hàng từ 500.000đ • Giữ trọn độ tươi ngon chuẩn vị Phú Yên</text>
+  </g>
+  <g transform="translate(980, 55)">
+    <rect width="160" height="50" rx="25" fill="#ffffff"/>
+    <text x="80" y="31" font-family="'Segoe UI', sans-serif" font-weight="800" font-size="15" fill="#d62828" text-anchor="middle">XEM GIỎ HÀNG</text>
+  </g>
+</svg>

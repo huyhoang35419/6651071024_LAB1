@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 500" width="1200" height="500">
+  <defs>
+    <linearGradient id="oceanBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#002b49"/>
+      <stop offset="45%" stop-color="#004e89"/>
+      <stop offset="80%" stop-color="#006494"/>
+      <stop offset="100%" stop-color="#0582ca"/>
+    </linearGradient>
+    <linearGradient id="warmSun" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f77f00"/>
+      <stop offset="100%" stop-color="#fcbf49"/>
+    </linearGradient>
+    <pattern id="fishScale" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 0 20 Q 20 40 40 20 Q 20 0 0 20 Z" fill="none" stroke="#ffffff" stroke-width="1" opacity="0.05"/>
+    </pattern>
+  </defs>
+
+  <!-- Deep Ocean Background -->
+  <rect width="1200" height="500" fill="url(#oceanBg)"/>
+  <rect width="1200" height="500" fill="url(#fishScale)"/>
+
+  <!-- Left side subtle gradient overlay for text readability -->
+  <rect width="650" height="500" fill="url(#oceanBg)" opacity="0.4"/>
+
+  <!-- Sun rising over Vung Ro Bay (Right Side) -->
+  <circle cx="950" cy="180" r="145" fill="url(#warmSun)" opacity="0.9"/>
+  <circle cx="950" cy="180" r="175" fill="none" stroke="#fcbf49" stroke-width="2" opacity="0.35" stroke-dasharray="8,6"/>
+  <circle cx="950" cy="180" r="205" fill="none" stroke="#fcbf49" stroke-width="1" opacity="0.2" stroke-dasharray="12,8"/>
+
+  <!-- Mountain silhouette of Hai Dang Dai Lanh / Da Dia Reef -->
+  <path d="M 450 500 L 620 330 L 760 410 L 920 270 L 1100 420 L 1200 350 L 1200 500 Z" fill="#001d2d" opacity="0.5"/>
+  <path d="M 540 500 L 700 360 L 840 440 L 990 310 L 1150 450 L 1200 410 L 1200 500 Z" fill="#001824" opacity="0.8"/>
+
+  <!-- Hải Đăng Đại Lãnh (Cape Dai Lanh Lighthouse) Silhouette -->
+  <g transform="translate(915, 200)" opacity="0.85">
+    <rect x="0" y="25" width="10" height="45" fill="#ffffff"/>
+    <polygon points="-3,25 13,25 5,12" fill="#facc15"/>
+    <circle cx="5" cy="8" r="4" fill="#fcbf49"/>
+  </g>
+
+  <!-- Sea waves in foreground -->
+  <path d="M 0 440 Q 300 400 600 450 T 1200 430 L 1200 500 L 0 500 Z" fill="#001622" opacity="0.95"/>
+  <path d="M 0 465 Q 250 435 550 470 T 1200 455 L 1200 500 L 0 500 Z" fill="#000e17"/>
+
+  <!-- Fishing Boat / Tàu đánh bắt cá ngừ trên biển Tuy Hòa -->
+  <g transform="translate(920, 315)">
+    <!-- Hull of the boat -->
+    <path d="M -90 20 Q 0 48 90 20 L 75 5 L -75 5 Z" fill="#b91c1c"/>
+    <path d="M -80 15 Q 0 38 80 15 L 75 5 L -75 5 Z" fill="#dc2626"/>
+    <!-- Cabin -->
+    <rect x="-30" y="-15" width="50" height="20" rx="3" fill="#ffffff" opacity="0.9"/>
+    <rect x="-24" y="-10" width="10" height="8" rx="2" fill="#0284c7"/>
+    <rect x="-8" y="-10" width="10" height="8" rx="2" fill="#0284c7"/>
+    <rect x="8" y="-10" width="8" height="8" rx="2" fill="#0284c7"/>
+    <!-- Mast & Flag -->
+    <rect x="15" y="-55" width="4" height="60" fill="#ffffff"/>
+    <polygon points="19,-50 60,-32 19,-14" fill="#facc15" opacity="0.95"/>
+    <!-- National Red Flag with Star -->
+    <polygon points="19,-55 35,-47 19,-39" fill="#dc2626"/>
+    <circle cx="27" cy="-47" r="2.5" fill="#facc15"/>
+  </g>
+
+  <!-- Gành Đá Đĩa Hexagonal Basalt Columns Silhouette (Far Left Bottom) -->
+  <g transform="translate(10, 430)" opacity="0.4">
+    <polygon points="0,70 15,30 35,30 45,70" fill="#0f172a"/>
+    <polygon points="40,70 55,20 75,20 85,70" fill="#1e293b"/>
+    <polygon points="80,70 95,35 115,35 125,70" fill="#0f172a"/>
+  </g>
+</svg>

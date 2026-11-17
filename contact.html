@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Liên Hệ & Hệ Thống Cửa Hàng | Đặc Sản Phú Yên</title>
+  <meta name="description" content="Liên hệ đặt hàng đặc sản Phú Yên, địa chỉ showroom Tuy Hòa và trạm điều phối TP.HCM. Hotline 0988.123.456 hỗ trợ 24/7.">
+  <link rel="icon" type="image/svg+xml" href="Images/logo.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Merriweather:ital,wght@0,700;0,900;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <link rel="stylesheet" href="Styles/style.css">
+  <link rel="stylesheet" href="Styles/responsive.css">
+</head>
+<body>
+
+  <!-- TOP BAR -->
+  <header class="top-bar">
+    <div class="container">
+      <div class="top-bar-left">
+        <span><i class="fa-solid fa-phone"></i> Hotline Tuy Hòa: <strong>0988.123.456</strong></span>
+        <span><i class="fa-solid fa-envelope"></i> dacsanxunau@phuyen.vn</span>
+        <span class="top-bar-highlight"><i class="fa-solid fa-snowflake"></i> Giao lạnh hỏa tốc toàn quốc - Đóng thùng xốp 48h</span>
+      </div>
+      <div class="top-bar-right">
+        <a href="order-tracking.html"><i class="fa-solid fa-route"></i> Tra cứu đơn hàng</a>
+        <span>|</span>
+        <a href="admin.html"><i class="fa-solid fa-user-shield"></i> Trang Quản Trị</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- MAIN HEADER -->
+  <div class="main-header">
+    <div class="container">
+      <div class="logo">
+        <a href="index.html">
+          <img src="Images/logo.svg" alt="Đặc Sản Phú Yên - Hồn Quê Xứ Nẫu">
+        </a>
+      </div>
+
+      <div class="header-search">
+        <form class="search-form" id="headerSearchForm">
+          <input type="text" class="search-input" id="searchInput" placeholder="Tìm kiếm bò một nắng, mắt cá ngừ, nước mắm..." autocomplete="off">
+          <button type="submit" class="search-btn"><i class="fa-solid fa-magnifying-glass"></i></button>
+        </form>
+        <div class="search-suggest" id="searchSuggestBox"></div>
+      </div>
+
+      <div class="header-actions">
+        <a href="shop.html" class="action-item"><i class="fa-regular fa-heart"></i><span class="badge-count wishlist-badge-count">0</span></a>
+        <a href="cart.html" class="cart-widget">
+          <div class="action-item"><i class="fa-solid fa-basket-shopping"></i><span class="badge-count cart-badge-count">0</span></div>
+          <div class="cart-info"><span>Giỏ hàng</span><span class="cart-total-price">0 đ</span></div>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- NAVIGATION BAR -->
+  <nav class="main-nav">
+    <div class="container">
+      <div class="dept-menu">
+        <button class="dept-btn" id="deptBtn">
+          <span><i class="fa-solid fa-bars"></i> TẤT CẢ DANH MỤC</span>
+          <i class="fa-solid fa-chevron-down"></i>
+        </button>
+        <ul class="dept-dropdown" id="deptDropdown">
+          <li><a href="shop.html?cat=hai-san"><i class="fa-solid fa-fish"></i> Hải sản đặc trưng Phú Yên</a></li>
+          <li><a href="shop.html?cat=thit-nui-rung"><i class="fa-solid fa-drumstick-bite"></i> Bò một nắng & Muối kiến vàng</a></li>
+          <li><a href="shop.html?cat=gia-vi"><i class="fa-solid fa-mortar-pestle"></i> Nước mắm Gành Đỏ & Bánh tráng</a></li>
+          <li><a href="shop.html?cat=banh-keo"><i class="fa-solid fa-cookie-bite"></i> Bánh phu thê & Quà vặt Xứ Nẫu</a></li>
+          <li><a href="shop.html?cat=qua-bieu"><i class="fa-solid fa-gift"></i> Combo Quà biếu Thượng Hạng</a></li>
+        </ul>
+      </div>
+
+      <ul class="nav-menu">
+        <li><a href="index.html">Trang chủ</a></li>
+        <li><a href="shop.html">Cửa hàng</a></li>
+        <li><a href="blog.html">Câu chuyện Xứ Nẫu</a></li>
+        <li><a href="about.html">Giới thiệu</a></li>
+        <li class="active"><a href="contact.html">Liên hệ</a></li>
+        <li><a href="order-tracking.html">Tra cứu đơn</a></li>
+        <li><a href="admin.html"><i class="fa-solid fa-gear"></i> Quản trị</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- BREADCRUMB -->
+  <div class="page-header" style="padding: 20px 0; margin-bottom: 30px;">
+    <div class="container">
+      <div class="breadcrumb">
+        <a href="index.html">Trang chủ</a>
+        <span>/</span>
+        <span class="current">Thông tin liên hệ & Hỗ trợ</span>
+      </div>
+      <h1 style="font-size: 26px; margin-top: 5px;">Liên Hệ Với Chúng Tôi</h1>
+    </div>
+  </div>
+
+  <!-- CONTACT MAIN CONTENT -->
+  <main class="container" style="margin-bottom: 70px;">
+    <!-- 3 Info Cards -->
+    <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 25px; margin-bottom: 45px;">
+      <div class="feature-card" style="padding: 25px; flex-direction: column; text-align: center;">
+        <div class="feature-icon" style="margin: 0 auto 10px;"><i class="fa-solid fa-location-dot"></i></div>
+        <h3 style="font-size: 16px; font-weight: 700; color: var(--dark); margin-bottom: 6px;">Showroom Chính Phú Yên</h3>
+        <p style="font-size: 13px; color: var(--text-muted);">189 Hùng Vương, Phường 5, TP. Tuy Hòa, Tỉnh Phú Yên</p>
+      </div>
+
+      <div class="feature-card" style="padding: 25px; flex-direction: column; text-align: center;">
+        <div class="feature-icon" style="margin: 0 auto 10px;"><i class="fa-solid fa-phone-volume"></i></div>
+        <h3 style="font-size: 16px; font-weight: 700; color: var(--dark); margin-bottom: 6px;">Hotline & Zalo</h3>
+        <p style="font-size: 14px; font-weight: 700; color: var(--primary);">0988.123.456 - 0257.3888.999</p>
+        <span style="font-size: 12px; color: var(--text-muted);">Hỗ trợ 24/7 cả ngày lễ & Chủ nhật</span>
+      </div>
+
+      <div class="feature-card" style="padding: 25px; flex-direction: column; text-align: center;">
+        <div class="feature-icon" style="margin: 0 auto 10px;"><i class="fa-solid fa-building"></i></div>
+        <h3 style="font-size: 16px; font-weight: 700; color: var(--dark); margin-bottom: 6px;">Kho Phân Phối TP.HCM</h3>
+        <p style="font-size: 13px; color: var(--text-muted);">45 Nguyễn Gia Trí, Phường 25, Quận Bình Thạnh, TP.HCM</p>
+      </div>
+    </div>
+
+    <!-- Form + Map Grid -->
+    <div style="display: grid; grid-template-columns: 1.1fr 1fr; gap: 35px; margin-bottom: 60px;">
+      <!-- Contact Form -->
+      <div class="checkout-box">
+        <h2><i class="fa-solid fa-paper-plane"></i> Gửi Tin Nhắn / Yêu Cầu Đặt Quà Biếu</h2>
+        <form onsubmit="event.preventDefault(); showToast('Đã gửi thành công!', 'Chúng tôi sẽ liên hệ lại bạn trong 15 phút.', 'success'); this.reset();">
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px;">
+            <div class="form-group">
+              <label>Họ và tên của bạn (*):</label>
+              <input type="text" class="form-control" placeholder="Ví dụ: Hoàng Tuấn" required>
+            </div>
+            <div class="form-group">
+              <label>Số điện thoại (*):</label>
+              <input type="tel" class="form-control" placeholder="0988..." required>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label>Địa chỉ Email:</label>
+            <input type="email" class="form-control" placeholder="email@gmail.com">
+          </div>
+
+          <div class="form-group">
+            <label>Chủ đề liên hệ:</label>
+            <select class="form-control">
+              <option>Tư vấn đặt hàng số lượng lớn / quà biếu doanh nghiệp</option>
+              <option>Hỏi về đóng thùng xốp cấp đông & thời gian giao hàng</option>
+              <option>Đăng ký làm đại lý phân phối đặc sản Phú Yên</option>
+              <option>Góp ý chất lượng dịch vụ</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label>Nội dung lời nhắn (*):</label>
+            <textarea class="form-control" rows="4" placeholder="Nhập câu hỏi hoặc yêu cầu cụ thể..." required></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-secondary btn-lg">
+            <i class="fa-solid fa-paper-plane"></i> GỬI YÊU CẦU NGAY
+          </button>
+        </form>
+      </div>
+
+      <!-- Map Mockup & Showroom Hours -->
+      <div>
+        <div class="checkout-box" style="margin-bottom: 25px;">
+          <h2><i class="fa-solid fa-map-location-dot"></i> Vị Trí Showroom Tại Phú Yên</h2>
+          <div style="border-radius: 8px; overflow: hidden; border: 1px solid var(--border-color); height: 260px; background: #e2e8f0; position: relative; display: flex; align-items: center; justify-content: center; text-align: center; padding: 20px;">
+            <div>
+              <i class="fa-solid fa-map-pin" style="font-size: 36px; color: #dc2626; margin-bottom: 10px;"></i>
+              <h4 style="font-size: 16px; color: var(--dark); font-weight: 800;">189 Hùng Vương, TP. Tuy Hòa, Tỉnh Phú Yên</h4>
+              <p style="font-size: 13px; color: var(--text-muted); margin-top: 5px;">Gần Quảng trường 1 Tháng 4 & Biển Tuy Hòa</p>
+              <a href="https://maps.google.com/?q=Tuy+Hoa+Phu+Yen" target="_blank" class="btn btn-outline btn-sm" style="margin-top: 12px;">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i> Mở trên Google Maps
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="checkout-box">
+          <h2><i class="fa-regular fa-clock"></i> Giờ Mở Cửa Phục Vụ</h2>
+          <ul style="font-size: 14px; line-height: 2; color: var(--text-main);">
+            <li><strong>Thứ 2 - Thứ 7:</strong> 07:30 - 21:30</li>
+            <li><strong>Chủ nhật & Ngày Lễ:</strong> 08:00 - 21:00</li>
+            <li><strong>Đóng hàng cấp đông:</strong> Hoạt động liên tục cả ngày đêm để kịp chuyến bay & xe lạnh sáng sớm.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- FAQ SECTION -->
+    <div class="checkout-box">
+      <h2><i class="fa-solid fa-circle-question"></i> Câu Hỏi Thường Gặp Khi Mua Đặc Sản Phú Yên</h2>
+      <div style="display: flex; flex-direction: column; gap: 15px; margin-top: 15px;">
+        <div style="background: #f8fafc; padding: 15px; border-radius: 8px; border: 1px solid var(--border-color);">
+          <strong style="color: var(--primary); font-size: 15px; display: block; margin-bottom: 5px;">
+            1. Bò một nắng và mắt cá ngừ đại dương có đem lên máy bay được không?
+          </strong>
+          <p style="font-size: 13px; color: #475569; margin: 0;">
+            Hoàn toàn được! Cửa hàng sẽ đóng gói sản phẩm trong thùng xốp đông lạnh, dán kín băng keo không mùi và không rỉ nước theo đúng quy định hành lý ký gửi của các hãng hàng không (Vietnam Airlines, Vietjet Air, Bamboo Airways).
+          </p>
+        </div>
+
+        <div style="background: #f8fafc; padding: 15px; border-radius: 8px; border: 1px solid var(--border-color);">
+          <strong style="color: var(--primary); font-size: 15px; display: block; margin-bottom: 5px;">
+            2. Giao hàng ra Hà Nội hoặc các tỉnh miền Bắc mất bao lâu?
+          </strong>
+          <p style="font-size: 13px; color: #475569; margin: 0;">
+            Đơn hàng ra Hà Nội được vận chuyển hỏa tốc bằng đường hàng không (kèm đá gel âm 18°C), thời gian chỉ mất từ 24 đến 36 tiếng kể từ lúc chốt đơn.
+          </p>
+        </div>
+
+        <div style="background: #f8fafc; padding: 15px; border-radius: 8px; border: 1px solid var(--border-color);">
+          <strong style="color: var(--primary); font-size: 15px; display: block; margin-bottom: 5px;">
+            3. Chính sách đổi trả nếu hàng không đạt chuẩn?
+          </strong>
+          <p style="font-size: 13px; color: #475569; margin: 0;">
+            Chúng tôi cam kết đổi trả 1-1 miễn phí hoặc hoàn tiền 100% trong vòng 24h nếu sản phẩm bị rã đông, hư hỏng trong quá trình vận chuyển hoặc không đúng mô tả chính gốc Phú Yên.
+          </p>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="main-footer">
+    <div class="container">
+      <div class="footer-bottom" style="border: none; padding: 0; text-align: center;">
+        <p>© 2026 Đặc Sản Phú Yên - Hồn Quê Xứ Nẫu. Thiết kế phục vụ bài tập môn Thiết kế Web (MSSV: 6651071024).</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="Scripts/products-data.js"></script>
+  <script src="Scripts/main.js"></script>
+</body>
+</html>

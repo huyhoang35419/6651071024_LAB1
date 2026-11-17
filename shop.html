@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cửa Hàng Đặc Sản Phú Yên | Danh Mục 100% Chính Gốc Xứ Nẫu</title>
+  <meta name="description" content="Danh mục đầy đủ hải sản, bò một nắng, muối kiến vàng, nước mắm Gành Đỏ, bánh tráng Hòa Đa. Lọc theo giá, danh mục, quà biếu.">
+  <link rel="icon" type="image/svg+xml" href="Images/logo.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Merriweather:ital,wght@0,700;0,900;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <link rel="stylesheet" href="Styles/style.css">
+  <link rel="stylesheet" href="Styles/responsive.css">
+</head>
+<body>
+
+  <!-- TOP BAR -->
+  <header class="top-bar">
+    <div class="container">
+      <div class="top-bar-left">
+        <span><i class="fa-solid fa-phone"></i> Hotline Tuy Hòa: <strong>0988.123.456</strong></span>
+        <span><i class="fa-solid fa-envelope"></i> dacsanxunau@phuyen.vn</span>
+        <span class="top-bar-highlight"><i class="fa-solid fa-snowflake"></i> Giao lạnh hỏa tốc toàn quốc - Đóng thùng xốp 48h</span>
+      </div>
+      <div class="top-bar-right">
+        <a href="order-tracking.html"><i class="fa-solid fa-route"></i> Tra cứu đơn hàng</a>
+        <span>|</span>
+        <a href="admin.html"><i class="fa-solid fa-user-shield"></i> Trang Quản Trị</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- MAIN HEADER -->
+  <div class="main-header">
+    <div class="container">
+      <div class="logo">
+        <a href="index.html">
+          <img src="Images/logo.svg" alt="Đặc Sản Phú Yên - Hồn Quê Xứ Nẫu">
+        </a>
+      </div>
+
+      <div class="header-search">
+        <form class="search-form" id="headerSearchForm">
+          <select class="search-category" id="searchCategorySelect">
+            <option value="all">Tất cả danh mục</option>
+            <option value="hai-san">Hải sản đặc trưng</option>
+            <option value="thit-nui-rung">Thịt & Núi rừng</option>
+            <option value="gia-vi">Gia vị & Nguyên liệu</option>
+            <option value="banh-keo">Bánh kẹo & Quà vặt</option>
+          </select>
+          <input type="text" class="search-input" id="searchInput" placeholder="Tìm kiếm bò một nắng, mắt cá ngừ, nước mắm..." autocomplete="off">
+          <button type="submit" class="search-btn">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </button>
+        </form>
+        <div class="search-suggest" id="searchSuggestBox"></div>
+      </div>
+
+      <div class="header-actions">
+        <a href="shop.html" class="action-item" title="Yêu thích">
+          <i class="fa-regular fa-heart"></i>
+          <span class="badge-count wishlist-badge-count">0</span>
+        </a>
+        <a href="cart.html" class="cart-widget">
+          <div class="action-item">
+            <i class="fa-solid fa-basket-shopping"></i>
+            <span class="badge-count cart-badge-count">0</span>
+          </div>
+          <div class="cart-info">
+            <span>Giỏ hàng</span>
+            <span class="cart-total-price">0 đ</span>
+          </div>
+        </a>
+        <button class="mobile-menu-btn" id="mobileMenuBtn">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- NAVIGATION BAR -->
+  <nav class="main-nav" id="mainNav">
+    <div class="container">
+      <div class="dept-menu">
+        <button class="dept-btn" id="deptBtn">
+          <span><i class="fa-solid fa-bars"></i> TẤT CẢ DANH MỤC</span>
+          <i class="fa-solid fa-chevron-down"></i>
+        </button>
+        <ul class="dept-dropdown" id="deptDropdown">
+          <li><a href="shop.html?cat=hai-san"><i class="fa-solid fa-fish"></i> Hải sản đặc trưng Phú Yên</a></li>
+          <li><a href="shop.html?cat=thit-nui-rung"><i class="fa-solid fa-drumstick-bite"></i> Bò một nắng & Muối kiến vàng</a></li>
+          <li><a href="shop.html?cat=gia-vi"><i class="fa-solid fa-mortar-pestle"></i> Nước mắm Gành Đỏ & Bánh tráng</a></li>
+          <li><a href="shop.html?cat=banh-keo"><i class="fa-solid fa-cookie-bite"></i> Bánh phu thê & Quà vặt Xứ Nẫu</a></li>
+          <li><a href="shop.html?cat=qua-bieu"><i class="fa-solid fa-gift"></i> Combo Quà biếu Thượng Hạng</a></li>
+        </ul>
+      </div>
+
+      <ul class="nav-menu">
+        <li><a href="index.html">Trang chủ</a></li>
+        <li class="active"><a href="shop.html">Cửa hàng</a></li>
+        <li><a href="blog.html">Câu chuyện Xứ Nẫu</a></li>
+        <li><a href="about.html">Giới thiệu</a></li>
+        <li><a href="contact.html">Liên hệ</a></li>
+        <li><a href="order-tracking.html">Tra cứu đơn</a></li>
+        <li><a href="admin.html"><i class="fa-solid fa-gear"></i> Quản trị</a></li>
+      </ul>
+
+      <div class="nav-hotline">
+        <i class="fa-solid fa-phone-volume"></i>
+        <div class="nav-hotline-text">
+          <span>Hỗ trợ đặt hàng 24/7</span>
+          <strong>0988.123.456</strong>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- PAGE HEADER & BREADCRUMB -->
+  <div class="page-header">
+    <div class="container">
+      <div class="breadcrumb">
+        <a href="index.html"><i class="fa-solid fa-house"></i> Trang chủ</a>
+        <span>/</span>
+        <span class="current">Cửa Hàng Đặc Sản Phú Yên</span>
+      </div>
+      <h1 id="shopPageHeading">Tất Cả Đặc Sản Phú Yên</h1>
+    </div>
+  </div>
+
+  <!-- SHOP MAIN CONTENT -->
+  <section class="container" style="margin-bottom: 60px;">
+    <!-- Mobile Filter Toggle Button -->
+    <div style="display: flex; justify-content: flex-end; margin-bottom: 15px;">
+      <button class="btn btn-outline btn-sm" id="toggleSidebarBtn" style="display: none;">
+        <i class="fa-solid fa-filter"></i> Bộ Lọc Tìm Kiếm
+      </button>
+    </div>
+
+    <div class="shop-layout">
+      <!-- SIDEBAR (ORGANI STYLE) -->
+      <aside class="shop-sidebar" id="shopSidebar">
+        <!-- Widget 1: Categories -->
+        <div class="sidebar-widget">
+          <h3 class="widget-title">Danh Mục Sản Phẩm</h3>
+          <ul class="widget-cat-list" id="sidebarCatList">
+            <li class="active" data-cat="all">
+              <a href="#">Tất cả đặc sản <span class="count">18</span></a>
+            </li>
+            <li data-cat="hai-san">
+              <a href="#">Hải sản đặc trưng <span class="count">5</span></a>
+            </li>
+            <li data-cat="thit-nui-rung">
+              <a href="#">Thịt & Núi rừng <span class="count">4</span></a>
+            </li>
+            <li data-cat="gia-vi">
+              <a href="#">Gia vị truyền thống <span class="count">4</span></a>
+            </li>
+            <li data-cat="banh-keo">
+              <a href="#">Bánh kẹo & Quà vặt <span class="count">4</span></a>
+            </li>
+            <li data-cat="qua-bieu">
+              <a href="#">Set quà biếu sang trọng <span class="count">1</span></a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Widget 2: Price Filter -->
+        <div class="sidebar-widget">
+          <h3 class="widget-title">Khoảng Giá</h3>
+          <div class="price-filter-box">
+            <input type="range" class="price-slider" id="priceRangeSlider" min="30000" max="1000000" step="10000" value="1000000">
+            <div class="price-inputs">
+              <span>Từ: <strong>30.000 đ</strong></span>
+              <span>Đến: <strong id="priceRangeValue" style="color: var(--primary);">1.000.000 đ</strong></span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Widget 3: Special Filter Badges -->
+        <div class="sidebar-widget">
+          <h3 class="widget-title">Tiêu Chí Chọn Lọc</h3>
+          <div class="filter-checkbox-list">
+            <label class="checkbox-item">
+              <input type="checkbox" id="filterGiftOnly">
+              <span>Gợi ý làm quà biếu</span>
+            </label>
+            <label class="checkbox-item">
+              <input type="checkbox" id="filterOcopOnly">
+              <span>Chứng nhận OCOP Phú Yên</span>
+            </label>
+            <label class="checkbox-item">
+              <input type="checkbox" id="filterFlashSaleOnly">
+              <span>Đang có Flash Sale</span>
+            </label>
+          </div>
+        </div>
+
+        <!-- Widget 4: Mini Promotional Box -->
+        <div class="sidebar-widget" style="background: #e0f2fe; border-color: #bae6fd;">
+          <h4 style="color: #004e89; font-weight: 800; margin-bottom: 8px;">Cần Tư Vấn Đặc Sản?</h4>
+          <p style="font-size: 13px; color: #334155; margin-bottom: 12px;">Đội ngũ người con Xứ Nẫu sẵn sàng gợi ý các món ăn chuẩn vị quê nhà cho bạn!</p>
+          <a href="tel:0988123456" class="btn btn-primary btn-sm" style="width: 100%;">
+            <i class="fa-solid fa-phone"></i> Gọi 0988.123.456
+          </a>
+        </div>
+      </aside>
+
+      <!-- PRODUCTS CONTENT RIGHT -->
+      <main>
+        <!-- Shop Controls Bar -->
+        <div class="shop-controls">
+          <div id="shopResultCount" style="font-size: 14px; color: var(--text-muted); font-weight: 600;">
+            Hiển thị 18 sản phẩm
+          </div>
+
+          <div class="shop-sort-box">
+            <label for="shopSortSelect" style="font-size: 13px; color: var(--text-muted);">Sắp xếp theo:</label>
+            <select id="shopSortSelect">
+              <option value="featured">Nổi bật nhất</option>
+              <option value="price-asc">Giá: Thấp đến Cao</option>
+              <option value="price-desc">Giá: Cao đến Thấp</option>
+              <option value="rating-desc">Đánh giá cao nhất</option>
+              <option value="name-asc">Tên: A - Z</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Products Grid -->
+        <div class="product-grid" id="shopProductsGrid">
+          <!-- Rendered dynamically -->
+        </div>
+
+        <!-- Empty state when no products match -->
+        <div id="shopEmptyState" style="display: none; text-align: center; padding: 60px 20px; background: #fff; border-radius: 12px; border: 1px solid var(--border-color);">
+          <div style="font-size: 48px; color: #94a3b8; margin-bottom: 15px;"><i class="fa-solid fa-box-open"></i></div>
+          <h3 style="font-size: 18px; color: var(--dark); margin-bottom: 8px;">Không tìm thấy đặc sản phù hợp</h3>
+          <p style="font-size: 14px; color: var(--text-muted); margin-bottom: 20px;">Vui lòng thử nới lỏng bộ lọc giá hoặc chọn danh mục khác.</p>
+          <button class="btn btn-primary" onclick="resetFilters()">Đặt lại bộ lọc</button>
+        </div>
+
+        <!-- Pagination -->
+        <div class="pagination" id="shopPagination">
+          <button class="page-btn active">1</button>
+          <button class="page-btn">2</button>
+          <button class="page-btn"><i class="fa-solid fa-chevron-right"></i></button>
+        </div>
+      </main>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="main-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <img src="Images/logo.svg" alt="Đặc Sản Phú Yên" style="max-height: 50px; margin-bottom: 15px; filter: brightness(0) invert(1);">
+          <p>Hệ thống phân phối và bán lẻ đặc sản chính gốc tỉnh Phú Yên. Mang hương vị nắng gió quê hương Xứ Nẫu đến với mọi gia đình Việt.</p>
+          <ul class="footer-contact">
+            <li><i class="fa-solid fa-location-dot"></i> Showroom chính: 189 Hùng Vương, Phường 5, TP. Tuy Hòa, Tỉnh Phú Yên</li>
+            <li><i class="fa-solid fa-phone"></i> Hotline: 0988.123.456</li>
+            <li><i class="fa-solid fa-envelope"></i> dacsanxunau@phuyen.vn</li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>VỀ CHÚNG TÔI</h4>
+          <ul class="footer-links">
+            <li><a href="about.html">Giới thiệu cửa hàng</a></li>
+            <li><a href="about.html">Chứng nhận OCOP & VSATTP</a></li>
+            <li><a href="blog.html">Câu chuyện ẩm thực Xứ Nẫu</a></li>
+            <li><a href="contact.html">Hệ thống phân phối</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>CHÍNH SÁCH & HỖ TRỢ</h4>
+          <ul class="footer-links">
+            <li><a href="cart.html">Chính sách giao hàng & Cấp đông</a></li>
+            <li><a href="order-tracking.html">Quy trình đổi trả & Hoàn tiền</a></li>
+            <li><a href="order-tracking.html">Tra cứu mã vận đơn</a></li>
+            <li><a href="checkout.html">Hướng dẫn thanh toán VietQR</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>KẾT NỐI VỚI CHÚNG TÔI</h4>
+          <p>Theo dõi các kênh mạng xã hội:</p>
+          <div class="social-links">
+            <a href="#" class="social-btn"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#" class="social-btn"><i class="fa-brands fa-tiktok"></i></a>
+            <a href="#" class="social-btn"><i class="fa-brands fa-youtube"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2026 Đặc Sản Phú Yên - Hồn Quê Xứ Nẫu. Thiết kế phục vụ bài tập môn Thiết kế Web (MSSV: 6651071024).</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="Scripts/products-data.js"></script>
+  <script src="Scripts/main.js"></script>
+  <script>
+    // Logic Lọc, Sắp xếp và Tìm kiếm trên trang Shop
+    let currentCategory = 'all';
+    let maxPrice = 1000000;
+    let onlyGift = false;
+    let onlyOcop = false;
+    let onlyFlashSale = false;
+    let currentSort = 'featured';
+
+    function parseUrlParams() {
+      const urlParams = new URLSearchParams(window.location.search);
+      const cat = urlParams.get('cat');
+      const search = urlParams.get('search');
+
+      if (cat) currentCategory = cat;
+      if (search) {
+        const input = document.getElementById('searchInput');
+        if (input) input.value = search;
+      }
+    }
+
+    function applyShopFilters() {
+      if (typeof PRODUCTS === 'undefined') return;
+
+      const urlParams = new URLSearchParams(window.location.search);
+      const searchQuery = (urlParams.get('search') || '').trim().toLowerCase();
+
+      let list = PRODUCTS.filter(p => {
+        // 1. Danh mục
+        if (currentCategory !== 'all' && p.category !== currentCategory) return false;
+        // 2. Giá tối đa
+        if (p.price > maxPrice) return false;
+        // 3. Quà biếu
+        if (onlyGift && !p.isGift) return false;
+        // 4. OCOP
+        if (onlyOcop && (!p.badge || !p.badge.includes('OCOP'))) return false;
+        // 5. Flash Sale
+        if (onlyFlashSale && !p.isFlashSale) return false;
+        // 6. Tìm kiếm theo từ khóa
+        if (searchQuery) {
+          const match = p.name.toLowerCase().includes(searchQuery) ||
+                        p.origin.toLowerCase().includes(searchQuery) ||
+                        p.categoryName.toLowerCase().includes(searchQuery);
+          if (!match) return false;
+        }
+        return true;
+      });
+
+      // Sắp xếp
+      if (currentSort === 'price-asc') {
+        list.sort((a, b) => a.price - b.price);
+      } else if (currentSort === 'price-desc') {
+        list.sort((a, b) => b.price - a.price);
+      } else if (currentSort === 'rating-desc') {
+        list.sort((a, b) => b.rating - a.rating);
+      } else if (currentSort === 'name-asc') {
+        list.sort((a, b) => a.name.localeCompare(b.name));
+      }
+
+      const grid = document.getElementById('shopProductsGrid');
+      const countEl = document.getElementById('shopResultCount');
+      const emptyState = document.getElementById('shopEmptyState');
+
+      if (countEl) countEl.textContent = `Hiển thị ${list.length} sản phẩm đặc sản`;
+
+      if (list.length === 0) {
+        if (grid) grid.innerHTML = '';
+        if (emptyState) emptyState.style.display = 'block';
+      } else {
+        if (emptyState) emptyState.style.display = 'none';
+        if (grid) grid.innerHTML = list.map(p => renderProductCard(p)).join('');
+      }
+
+      // Cập nhật trạng thái active trên sidebar category list
+      const catItems = document.querySelectorAll('#sidebarCatList li');
+      catItems.forEach(li => {
+        if (li.getAttribute('data-cat') === currentCategory) {
+          li.classList.add('active');
+        } else {
+          li.classList.remove('active');
+        }
+      });
+
+      // Cập nhật tiêu đề trang
+      const titleEl = document.getElementById('shopPageHeading');
+      if (titleEl) {
+        if (currentCategory === 'hai-san') titleEl.textContent = 'Hải Sản Đặc Trưng Phú Yên';
+        else if (currentCategory === 'thit-nui-rung') titleEl.textContent = 'Bò Một Nắng & Đặc Sản Núi Rừng';
+        else if (currentCategory === 'gia-vi') titleEl.textContent = 'Gia Vị & Nguyên Liệu Truyền Thống';
+        else if (currentCategory === 'banh-keo') titleEl.textContent = 'Bánh Kẹo & Quà Vặt Xứ Nẫu';
+        else if (currentCategory === 'qua-bieu') titleEl.textContent = 'Set Quà Biếu Phú Yên Sang Trọng';
+        else titleEl.textContent = 'Tất Cả Đặc Sản Phú Yên';
+      }
+    }
+
+    function resetFilters() {
+      currentCategory = 'all';
+      maxPrice = 1000000;
+      onlyGift = false;
+      onlyOcop = false;
+      onlyFlashSale = false;
+      currentSort = 'featured';
+
+      const slider = document.getElementById('priceRangeSlider');
+      const sliderVal = document.getElementById('priceRangeValue');
+      if (slider) slider.value = 1000000;
+      if (sliderVal) sliderVal.textContent = '1.000.000 đ';
+
+      const giftChk = document.getElementById('filterGiftOnly');
+      const ocopChk = document.getElementById('filterOcopOnly');
+      const fsChk = document.getElementById('filterFlashSaleOnly');
+      if (giftChk) giftChk.checked = false;
+      if (ocopChk) ocopChk.checked = false;
+      if (fsChk) fsChk.checked = false;
+
+      // Xóa param trên URL
+      window.history.pushState({}, '', 'shop.html');
+      applyShopFilters();
+    }
+
+    document.addEventListener('DOMContentLoaded', function() {
+      parseUrlParams();
+
+      // Sidebar category clicks
+      const catList = document.querySelectorAll('#sidebarCatList li');
+      catList.forEach(item => {
+        item.addEventListener('click', function(e) {
+          e.preventDefault();
+          currentCategory = this.getAttribute('data-cat');
+          applyShopFilters();
+        });
+      });
+
+      // Price slider
+      const slider = document.getElementById('priceRangeSlider');
+      const sliderVal = document.getElementById('priceRangeValue');
+      if (slider) {
+        slider.addEventListener('input', function() {
+          maxPrice = parseInt(this.value, 10);
+          if (sliderVal) sliderVal.textContent = formatPrice(maxPrice);
+          applyShopFilters();
+        });
+      }
+
+      // Checkboxes
+      const giftChk = document.getElementById('filterGiftOnly');
+      if (giftChk) {
+        giftChk.addEventListener('change', function() {
+          onlyGift = this.checked;
+          applyShopFilters();
+        });
+      }
+
+      const ocopChk = document.getElementById('filterOcopOnly');
+      if (ocopChk) {
+        ocopChk.addEventListener('change', function() {
+          onlyOcop = this.checked;
+          applyShopFilters();
+        });
+      }
+
+      const fsChk = document.getElementById('filterFlashSaleOnly');
+      if (fsChk) {
+        fsChk.addEventListener('change', function() {
+          onlyFlashSale = this.checked;
+          applyShopFilters();
+        });
+      }
+
+      // Sort
+      const sortSelect = document.getElementById('shopSortSelect');
+      if (sortSelect) {
+        sortSelect.addEventListener('change', function() {
+          currentSort = this.value;
+          applyShopFilters();
+        });
+      }
+
+      applyShopFilters();
+    });
+  </script>
+</body>
+</html>

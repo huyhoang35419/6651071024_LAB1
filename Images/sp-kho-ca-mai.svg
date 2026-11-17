@@ -1,0 +1,59 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" width="500" height="500">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fef3c7"/>
+      <stop offset="100%" stop-color="#ffffff"/>
+    </linearGradient>
+    <linearGradient id="badgeGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#d90429"/>
+      <stop offset="100%" stop-color="#f77f00"/>
+    </linearGradient>
+    <filter id="cardShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#000000" flood-opacity="0.12"/>
+    </filter>
+  </defs>
+
+  <!-- Background Base -->
+  <rect width="500" height="500" fill="url(#bgGrad)"/>
+  
+  <!-- Subtle decorative rings -->
+  <circle cx="250" cy="230" r="170" fill="none" stroke="#d97706" stroke-width="1.5" stroke-dasharray="6,6" opacity="0.35"/>
+  <circle cx="250" cy="230" r="140" fill="#ffffff" filter="url(#cardShadow)"/>
+  
+  <!-- Product Main Art / Graphics -->
+  <g transform="translate(250, 230)">
+    <ellipse cx="0" cy="45" rx="85" ry="18" fill="#cbd5e1" opacity="0.6"/>
+<!-- Dĩa cá mai rim mè -->
+<ellipse cx="0" cy="10" rx="85" ry="30" fill="#f8fafc" stroke="#e2e8f0" stroke-width="3"/>
+<g transform="translate(-10, -5)">
+  <!-- Những con cá mai phơi sấy rải mè -->
+  <polygon points="-40,-10 0,-25 40,-10 20,5 -20,10" fill="#d97706"/>
+  <polygon points="-25,0 15,-15 55,0 35,15 -5,20" fill="#f59e0b"/>
+  <polygon points="-50,10 -10,-5 30,10 10,25 -30,30" fill="#b45309"/>
+  <!-- Hạt mè trắng -->
+  <circle cx="-15" cy="-8" r="2" fill="#ffffff"/>
+  <circle cx="10" cy="-12" r="2" fill="#ffffff"/>
+  <circle cx="25" cy="5" r="2" fill="#ffffff"/>
+  <circle cx="-30" cy="15" r="2" fill="#ffffff"/>
+  <circle cx="5" cy="18" r="2" fill="#ffffff"/>
+</g>
+<circle cx="50" cy="-20" r="10" fill="#dc2626"/> <!-- ớt hiểm rim -->
+  </g>
+
+  <!-- Tag Category -->
+  <rect x="25" y="25" width="160" height="28" rx="14" fill="#004e89" opacity="0.9"/>
+  <text x="105" y="44" font-family="'Segoe UI', Roboto, sans-serif" font-weight="600" font-size="12" fill="#ffffff" text-anchor="middle">HẢI SẢN ĐẶC TRƯNG</text>
+
+  <!-- Trust Badge -->
+  <g transform="translate(350, 25)">
+    <rect width="125" height="28" rx="14" fill="url(#badgeGrad)"/>
+    <text x="62" y="19" font-family="'Segoe UI', Roboto, sans-serif" font-weight="700" font-size="11" fill="#ffffff" text-anchor="middle">GIÒN CAY ĐẬM ĐÀ</text>
+  </g>
+
+  <!-- Bottom Info Panel -->
+  <rect x="0" y="415" width="500" height="85" fill="#ffffff" opacity="0.95"/>
+  <line x1="0" y1="415" x2="500" y2="415" stroke="#e2e8f0" stroke-width="1"/>
+  
+  <text x="250" y="448" font-family="'Segoe UI', Roboto, sans-serif" font-weight="800" font-size="18" fill="#0f172a" text-anchor="middle">Khô Cá Mai Rim Mè</text>
+  <text x="250" y="474" font-family="'Segoe UI', Roboto, sans-serif" font-weight="600" font-size="13" fill="#e36414" text-anchor="middle">★ CHÍNH HÃNG PHÚ YÊN • CẤP ĐÔNG 48H ★</text>
+</svg>
